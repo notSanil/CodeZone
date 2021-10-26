@@ -7,7 +7,7 @@ basic syntactical questions
         precision print
     loops
 
-basic data structures
+data structures
     arrays
         array manipulation
         2D matrix
@@ -22,7 +22,7 @@ basic data structures
     Segment Trees
 
 
-basic algorithms
+algorithms
     recursion
         fibonacci
         slowly increasing the level of questions
@@ -59,3 +59,5 @@ basic algorithms
     Divide-and-conquer algorithms
     
 
+While providing questions, we can combine data structures and algorithms to choose the right questions.
+Akele ds ya akele algo ke qns nahi honge mostly.
