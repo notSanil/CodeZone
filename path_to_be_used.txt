@@ -1,0 +1,61 @@
+basic syntactical questions
+    basic strings
+        formatting
+    ints
+        basic calculator
+    floats
+        precision print
+    loops
+
+basic data structures
+    arrays
+        array manipulation
+        2D matrix
+        prefix sum type questions
+    Sets, finding subset problems, etc.
+    Trees
+	DFS
+	DSU
+	BFS
+    Graphs
+    Sparse Table
+    Segment Trees
+
+
+basic algorithms
+    recursion
+        fibonacci
+        slowly increasing the level of questions
+
+    sorting algorithms
+        selection sort
+        bubble sort
+        insertion sort
+        merge sort
+        quick sort
+        counting sort
+    
+    searching techniques
+        linear search
+        binary search
+        ternary search
+
+    backtracking
+        crossword solving
+        encryption-decryption
+
+    number theory
+        basic modulus questions
+        primes
+        calculate (a^b)%p in logb TC
+
+
+    greedy
+
+
+    a gist of dynamic programming
+        solving fibonacci and some basic dp problems
+        
+    Divide-and-conquer algorithms
+    
+
