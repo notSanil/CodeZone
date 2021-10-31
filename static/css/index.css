@@ -1,8 +1,7 @@
 body{
-    background-image: url("Home_BG.png");
-    background-size: cover; 
+    background-image: url('/static/img/Home_BG.png');
+    background-size: cover;
 }
-
 .myfont{
     text-align: center;
     position: relative; top: 70px; right: 150px;
@@ -10,21 +9,24 @@ body{
     font-family: sans-serif;
     color: black;
     text-shadow: 0 0 5px whitesmoke, 0 0 5px whitesmoke;
+    align-items: center;
 }
 
 
 .button1{
     border: none;
-    position: relative; left: 300px; top: 20px;
+    position: relative; left: 340px; top: 20px;
     background-color: black;
     text-align: center;
-    padding: 10px 10px;
+    padding: 6px 10px;
     font-size: 32px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    border-radius: 25%;
+    border-radius: 25px;
     cursor: pointer;
     color: white;
     transition-duration: 0.3s;
+    margin-right: 25px;
+    align-items: center;
 }
     
     .button1:hover {
@@ -109,7 +111,7 @@ body{
 
 .button4{
     border-radius: 50%;
-    background-image: url("./Home\(Menu\ Bar\).png");
+    background-image: url('/static/img/Home_Menu_Bar.png');
     background-size: 25px 25px;
     width: 25px; height: 25px;
     background-position: center;
