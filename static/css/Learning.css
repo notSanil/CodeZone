@@ -1,0 +1,147 @@
+body{
+    background-image: url("Home_BG.png");
+    background-size: cover; 
+}
+
+.myfont{
+    text-align: center;
+    position: relative; top: 70px; right: 150px;
+    font-size: 69px;
+    font-family: sans-serif;
+    color: black;
+    text-shadow: 0 0 5px whitesmoke, 0 0 5px whitesmoke;
+}
+
+
+.button1{
+    border: none;
+    position: relative; left: 300px; top: 20px;
+    background-color: black;
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 32px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 25%;
+    cursor: pointer;
+    color: white;
+    transition-duration: 0.3s;
+}
+    
+    .button1:hover {
+        background-color: white;
+        color: darkblue;
+    }
+
+
+.tooltip{
+    position: relative; 
+    border-radius: 25%;
+    color: whitesmoke;
+    display: inline-block;
+    
+}
+    .tooltip .tooltiptext{
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -50px;
+    }
+    .tooltip .tooltiptext2{
+    visibility: hidden;
+    width: 80px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: 150%;
+    margin-left: -40px;
+    }    
+    .tooltip:hover .tooltiptext{
+        visibility: visible;
+    }
+    .tooltip:hover .tooltiptext2{
+        visibility: visible;
+    }
+
+
+
+.button2{
+    position: relative; top: 175px; left: 120px;
+    border: none;
+    border-radius: 50%;
+    padding: 0px;
+    width: 50px; height: 50px;
+    cursor: pointer;
+    margin-right: 20px;
+    transition-duration: 0.3s;
+}
+    .button2:hover{
+        opacity: 0.75;
+    }
+
+
+.button3{
+    position: relative; left: 900px; bottom: 385px;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    margin-right: 25px;
+    cursor: pointer;
+    border: none;
+}
+    .button3:hover{
+        text-decoration: underline;
+    }
+
+.button4{
+    border-radius: 50%;
+    background-image: url("./Home\(Menu\ Bar\).png");
+    background-size: 25px 25px;
+    width: 25px; height: 25px;
+    background-position: center;
+    cursor: pointer;
+    border: none;
+    position: relative; left: 920px; bottom: 380px;
+}
+
+    .button4:hover, .button4:focus{
+        opacity: 0.75;
+    }
+
+    .dropdown-content{
+        position: relative; left: 1150px; bottom: 380px;
+        background: transparent;
+        display: none;
+        width:fit-content;
+    }
+
+    .dropdown-content a{
+        color: white;
+        padding: 10px 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover{
+        text-decoration: underline;
+        background-color: grey;
+    }
+
+    .show{
+        display: block}
+
+    
