@@ -1,0 +1,98 @@
+body{
+    background-image: url('/static/img/dashboard_images/LandingPage_BG.jpg');
+    background-size: cover; background-repeat: no-repeat;
+    margin: 0;
+}
+
+.mynav{
+    background-color: darkslategray;
+    padding: 1% 1%;
+}
+
+.stdiconbtn{
+    border-radius: 50%;
+    width: 30px; height: 30px;
+    background-image: url('/static/img/dashboard_images/LandingPage_HomeIcon.png');
+    background-size: contain;
+    border: none;
+    position: relative; bottom: 5px;
+}
+    .stdiconbtn:hover{
+        cursor: pointer;
+        opacity: 0.75;
+    }
+
+.tooltip{
+    position: relative;
+    background-color: transparent;
+    display: inline-block;
+}
+    .tooltiptext{
+        position: absolute; top: 135%; left: 100%;
+        background-color: black;
+        color: white;
+        width: 50px;
+        margin-left: -25px;
+        visibility: hidden;
+    }
+    .tooltip:hover .tooltiptext{
+        visibility: visible;
+    }
+    
+.srchbar{
+    font-size: 100%;
+    margin-left: 2%;
+    border-radius: 12px;
+    border:none;
+    padding: 3px 5px;
+    width: 10%;
+    transition-duration: 0.5s;    
+}
+    .srchbar:hover{
+        cursor: text
+    }
+    .srchbar:focus{
+        width: 12%;
+    }
+    
+.btn1{
+    width: 5%; height: 5%;
+    position:inherit; left: 20px;
+    bottom: 2%;
+    background-color: rgb(48, 48, 219);
+    color: white;
+    text-align: center;
+    border:black;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+    .btn1:hover{
+        text-decoration: white underline;
+        cursor: pointer;        
+    }
+    
+.btn2{
+    background: transparent;
+    color: white;
+    font-size: 100%;
+    text-decoration: none;
+    border:none;
+    position: relative; left: 50%;
+    margin-right: 2%;
+}
+    .btn2:hover{
+        text-decoration: white underline;
+    }
+
+.profilebtn{
+    position: relative; left:50%; bottom: 5px;
+    background-image: url('/static/img/dashboard_images/LandingPage_BlankProfile.png');
+    background-size: contain;
+    border-radius: 50%;
+    border: none;
+    width: 30px; height: 30px;
+    margin-right: 5%;
+}
+    .profilebtn:hover{
+        cursor: pointer;
+    }
