@@ -1,5 +1,5 @@
 body{
-    background-image: url('/static/img/LandingPage_images/LandingPage_BG.jpg');
+    background-image: url('/static/img/dashboard_images/LandingPage_BG.jpg');
     background-size: cover; background-repeat: no-repeat;
     margin: 0;
 }
@@ -12,7 +12,7 @@ body{
 .stdiconbtn{
     border-radius: 50%;
     width: 30px; height: 30px;
-    background-image: url('/static/img/LandingPage_images/LandingPage_HomeIcon.png');
+    background-image: url('/static/img/dashboard_images/LandingPage_HomeIcon.png');
     background-size: contain;
     border: none;
     position: relative; bottom: 5px;
@@ -86,7 +86,7 @@ body{
 
 .profilebtn{
     position: relative; left:50%; bottom: 5px;
-    background-image: url('/static/imgLandingPage_images/LandingPage_BlankProfile.png');
+    background-image: url('/static/img/dashboard_images/LandingPage_BlankProfile.png');
     background-size: contain;
     border-radius: 50%;
     border: none;
