@@ -1,9 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html>
-    <title>About the Team</title>
-    <body>
-        <div>
-            <p>About Page</p>
-        </div>
-    </body>
+
+<head>
+	<title> About Us </title>
+	<link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+</head>
+
+<style>
+
+	@import url('http://fonts.cdnfonts.com/css/gotham');
+	
+	.full-pg {
+		top:  0;
+		left:  0;
+		height: 96vh;
+		width: 100%;
+	}
+
+	.repo {
+		position: absolute;
+		top: 84%;
+		left: 4%;
+		height: 9vh;
+		width: 9vh;
+	}
+
+	.repo:hover {
+		transform: scale(1.25);
+	}
+
+	ul {
+		list-style-type: none;
+		margin:  0;
+		padding: 0;
+		overflow: hidden;
+		position: absolute;
+		top: 4.50%;
+		right: 10%;
+	}
+
+	li {
+		float: right;
+		font-family: 'Gotham Light', sans-serif;		
+	}
+
+	li a {
+		display:  block;
+		color: white;
+		text-align: center;
+		padding:  14px 16px;
+		text-decoration: none;
+		color: black;
+		font-size: 20px;
+	}
+
+	li a:hover {
+		text-decoration: underline;
+		background-color: #fffef2;
+		font-size: 24px;
+	}
+
+</style>
+
+<body>
+
+	<div>
+		<img src = "/static/img/about_pg_images/about_bg.svg" alt = "About Page" class = "full-pg">
+	</div>
+	<div>
+		<a href = "https://github.com/notSanil/CodeZone"> <img src = "/static/img/about_pg_images/repo_link.svg" alt = "Repo" class = "repo"> </a>
+	</div>
+	<div>
+		<ul>
+			<li> <a href = "about_pg.html"> About </a> </li>
+			<li> <a href = "signin.html"> Sign In </a> </li>
+			<li> <a href = "index.html"> Home </a> </li>
+
+		</ul>
+	</div>
+	
+</body>
+
 </html>
+
