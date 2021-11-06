@@ -1,9 +1,181 @@
 <!DOCTYPE html>
 <html>
-    <title>Practice Zone</title>
-    <body>
-        <div>
-            <p> Practice Page</p>
-        </div>
-    </body>
+
+    <head>
+        <title> Practice Zone </title>
+        <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+    </head>
+
+<style>
+
+    @import url('http://fonts.cdnfonts.com/css/gotham');
+
+    ul {
+		list-style-type: none;
+		margin:  0;
+		padding: 0;
+		overflow: hidden;
+		position: absolute;
+		top: 4.50%;
+		right: 10%;
+	}
+
+	li {
+		float: right;
+		font-family: 'Gotham Light', sans-serif;		
+	}
+
+	li a {
+		display:  block;
+		color: white;
+		text-align: center;
+		padding:  14px 16px;
+		text-decoration: none;
+		color: black;
+		font-size: 20px;
+	}
+
+	li a:hover {
+		text-decoration: underline;
+		background-color: #fffef2;
+		font-size: 24px;
+	}
+
+    body {
+        background: turquoise;
+        color: #1d1d26;
+        height: 100vh;
+        display: flex;   
+    }
+
+    span {
+        position: absolute;
+        font-family: "Gotham Ultra", sans-serif;
+        font-weight: 700;
+        font-size: 56px;
+        text-transform: uppercase;
+        font-style: italic;
+        letter-spacing: 0.05em;
+        display: inline-block;
+        left: 10%;
+        top: 3%;
+    }
+
+    span:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: attr(filter-content);
+
+        filter: url(#motion-blur-filter);
+    }
+
+    svg {
+        display: none;
+    }
+
+    img {
+        position: absolute;
+        right: 4%;
+        top: 6%;
+        width: 28px;
+        height: 28px;
+    }
+
+    img:hover {
+        transform: scale(1.20)
+    }
+
+    input[type=text] {
+        width: 180px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 20px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+    
+    @media all and (display-mode: browser){
+    .search-bar {
+        position: absolute;
+        top: 15%;
+        left: 68%;
+        }
+
+    input[type=text]:focus {
+        width: 50vh;
+        }   
+    }
+
+    @media all and (display-mode: fullscreen){
+    .search-bar {
+        position: absolute;
+        top: 15%;
+        left: 71%;
+        }
+
+    input[type=text]:focus {
+        width: 45vh;
+        }
+    }
+
+    .container {
+        background-color: #1d1d26;
+        height: 65vh;
+        width: 190vh;
+        text-decoration: underline;
+        color: #ccc;
+        margin-left: 25vh;
+        margin-top: 25vh;
+        margin-right: 25vh;
+        font-size: 32px;
+        font-family: "Gotham Light", sans-serif;
+        padding: 16px;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        border-radius: 16px;
+        border-width: 3px;
+        border-style: solid;
+        border-color: navy;
+    }
+
+</style>
+
+<body>
+
+    <div>
+		<ul>
+			<li> <a href = "#"> About </a> </li>
+			<li> <a href = "#"> Sign In </a> </li>
+			<li> <a href = "#"> Home </a> </li>
+
+		</ul>
+	</div>
+
+    <svg xmlns="http://www.w3.org/2000/svg">
+  
+        <filter id = "motion-blur-filter" filterUnits = "userSpaceOnUse">           
+            <feGaussianBlur stdDeviation="100 0"></feGaussianBlur>
+        </filter>
+
+    </svg>      
+    <span filter-content = "Pr"> Practice Zone </span>
+
+    <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"> <img src = "/static/img/menu_icon.svg" alt = "Menu Icon"> </a>
+        
+    <form>
+        <input type = "text" name = "search" placeholder = "Search a Problem.." class = "search-bar">
+    </form>
+      
+    <div class = "container"> Problems </div>
+
+</body>
+
 </html>
