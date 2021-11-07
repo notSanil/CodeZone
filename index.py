@@ -1,12 +1,14 @@
-from flask import Flask, render_template, redirect, request
-from flask_login.utils import login_user, logout_user
-from google_auth_oauthlib.flow import Flow
 import os
 import requests
+import json
+
+from flask import Flask, render_template, redirect, request, session, abort
+from flask_login.utils import login_user, logout_user
+from google_auth_oauthlib.flow import Flow
 import google.auth.transport.requests
 from google.oauth2 import id_token
 from flask_login import LoginManager, current_user
-import json
+from pip._vendor import cachecontrol
 
 from user import User
 from db_handler import db
@@ -15,7 +17,10 @@ app = Flask(__name__)
 app.debug = True
 
 login_manager = LoginManager()
-app.secret_key = b'\xce\xf1z\xdd\x11^\xa8\xaf\xf02\xbb\xb8\xf7\x97\x99\xdd{\xffr\xd5}\xabP\x9e'
+with open("secure/app_secrets.json") as appSecrets:
+    data = json.loads(appSecrets.read())
+    app.secret_key = bytes(data["secret_key"], 'utf-8')
+
 # Why is security such a nightmare to deal with 
 login_manager.init_app(app)
 
@@ -26,13 +31,13 @@ os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = '1'
 
 CLIENT_ID = None
 
-with open("client_secrets.json") as file:
+with open("secure/client_secrets.json") as file:
     data = json.loads(file.read())
     CLIENT_ID = data['web']['client_id'] 
 
 
 flow = Flow.from_client_secrets_file(
-    client_secrets_file='client_secrets.json',
+    client_secrets_file='secure/client_secrets.json',
     scopes=["https://www.googleapis.com/auth/userinfo.profile", 
     "https://www.googleapis.com/auth/userinfo.email", "openid"],
     redirect_uri="http://localhost:5000/signin/callback"
@@ -67,6 +72,7 @@ def practice():
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
     authorization_url, state = flow.authorization_url()
+    session["state"] = state
     return redirect(authorization_url)
 
 @app.route("/trending")
@@ -78,15 +84,19 @@ def dashboard():
     if current_user.is_authenticated:
         return render_template("dashboard.html")
 
-    return "Fuck off"
+    return "Temp text to show user is not signed in"
 
 @app.route("/signin/callback", methods=["GET"])
 def callback():
     flow.fetch_token(authorization_response=request.url)
 
+    if not session["state"] == request.args["state"]:
+        abort(500)
+
     credentials = flow.credentials
     requestSession = requests.session()
-    token_request = google.auth.transport.requests.Request(session=requestSession)
+    cache_session = cachecontrol.CacheControl(requestSession)
+    token_request = google.auth.transport.requests.Request(session=cache_session)
 
     idToken = id_token.verify_oauth2_token(
         id_token=credentials.id_token,
