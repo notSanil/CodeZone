@@ -1,149 +1,135 @@
+@font-face {
+    font-family: GothBlack;
+    src: url(/static/fonts/GothamBlack.otf);
+}
+
+@font-face {
+    font-family: GothThin ;
+    src: url(/static/fonts/GothamThinRegular.otf);
+}
+
 body{
-    background-image: url('/static/img/Home_BG.png');
-    background-size: cover;
-}
-.myfont{
-    text-align: center;
-    position: relative; top: 70px; right: 150px;
-    font-size: 69px;
-    font-family: sans-serif;
-    color: black;
-    text-shadow: 0 0 5px whitesmoke, 0 0 5px whitesmoke;
-    align-items: center;
+    min-height: 100%;
+    margin: 0%;
+    background-color: #13A89E;
 }
 
-
-.button1{
-    border: none;
-    position: relative; left: 340px; top: 20px;
-    background-color: black;
-    text-align: center;
-    padding: 6px 10px;
-    font-size: 32px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    border-radius: 25px;
-    cursor: pointer;
+.div1{
+    width: 25%; height: 100%;
+    position: relative; top: 10vh; left: 10%; 
+    background-color: #1d1d26;
     color: white;
-    transition-duration: 0.3s;
-    margin-right: 25px;
-    align-items: center;
+    padding: 2% 2%;
+    border-radius: 18px;    
 }
-    
-    .button1:hover {
-        background-color: white;
-        color: darkblue;
+
+.head{
+    font-size: 350%;
+    font-family: GothBlack;
+    color: white;
+}
+
+.btn1{
+    padding: 2% 4%;
+    background-color: #13A89E;
+    color: white;
+    border-radius: 20px;
+    border: 2px transparent solid;
+    text-align: center;
+    font-size: 125%;
+}
+    .btn1:hover{
+        background-color: #1d1d26;
+        border: 2px white solid;
+        cursor: pointer;
+        text-decoration: underline;
     }
 
+.btn2{
+    padding: 2% 4%;
+    background-color: #1d1d26;
+    color: white;
+    border-radius: 20px;
+    border: white;
+    text-align: center;
+    border: 2px white solid;
+    margin-left: 10%;
+    font-size: 125%;
+    font-family: GothThin;
+}
+    .btn2:hover{
+        background-color: #13A89E;
+        border: 2px transparent solid;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+
+.div2{
+    position: relative; top: 15vh; right: vw;
+    margin-left: 2%;
+    align-items: center;
+}
+
+.myimg{
+    position: relative; left: -5%; top:50%;
+    width: 50px; height: 50px;
+    margin-left: 2%;
+}
+    .myimg:hover{
+        opacity: 0.75;
+    }
+
+.mynav{
+    background-color: transparent;
+    padding: 0.5% 0.5%;
+    position: relative; top: 3vh;
+}
+    .lnk{
+        position: relative; left: 65%;
+        margin-left: 5%;
+        color: white;
+        text-decoration: none;
+        font-size: 110%;
+        font-family: GothBlack;
+    }
+    .lnk:hover{
+        text-decoration: underline;
+    }
+
+.div3{
+    position: absolute; left: 50%; bottom: 5%; 
+    width: 35%; height: 60%;
+}
+.myimg2{
+    position: relative; left: 10%; bottom: 10%;
+    width: 100%; height: 118%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
 
 .tooltip{
-    position: relative; 
-    border-radius: 25%;
-    color: whitesmoke;
-    display: inline-block;
-    
-}
-    .tooltip .tooltiptext{
-    visibility: hidden;
-    width: 100px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -50px;
-    }
-    .tooltip .tooltiptext2{
-    visibility: hidden;
-    width: 80px;
+    position: relative; left: 1%; 
+    width: 50px; height: 50px;
+    margin-left: 2%;
     background-color: transparent;
-    color: white;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    
-    position: absolute;
-    z-index: 1;
-    top: 120%;
-    left: 150%;
-    margin-left: -40px;
-    }    
+    display: inline-block;
+}
+    .tooltiptext{
+        position: absolute; bottom:50%; left: 45%;
+        background-image: radial-gradient(rgb(16,16,16), black);
+        color: white;
+        width: 120px;
+        margin-left: -60px;
+        border-radius: 8px;
+        padding: 2px 2px;
+        font-family: GothThin;
+        visibility: hidden;
+        text-align: center;
+    }
     .tooltip:hover .tooltiptext{
         visibility: visible;
     }
-    .tooltip:hover .tooltiptext2{
-        visibility: visible;
-    }
 
 
 
-.button2{
-    position: relative; top: 175px; left: 120px;
-    border: none;
-    border-radius: 50%;
-    padding: 0px;
-    width: 50px; height: 50px;
-    cursor: pointer;
-    margin-right: 20px;
-    transition-duration: 0.3s;
-}
-    .button2:hover{
-        opacity: 0.75;
-    }
-
-
-.button3{
-    position: relative; left: 900px; bottom: 385px;
-    background-color: transparent;
-    color: white;
-    font-size: 14px;
-    margin-right: 25px;
-    cursor: pointer;
-    border: none;
-}
-    .button3:hover{
-        text-decoration: underline;
-    }
-
-.button4{
-    border-radius: 50%;
-    background-image: url('/static/img/Home_Menu_Bar.png');
-    background-size: 25px 25px;
-    width: 25px; height: 25px;
-    background-position: center;
-    cursor: pointer;
-    border: none;
-    position: relative; left: 920px; bottom: 380px;
-}
-
-    .button4:hover, .button4:focus{
-        opacity: 0.75;
-    }
-
-    .dropdown-content{
-        position: relative; left: 1150px; bottom: 380px;
-        background: transparent;
-        display: none;
-        width:fit-content;
-    }
-
-    .dropdown-content a{
-        color: white;
-        padding: 10px 10px;
-        text-decoration: none;
-        display: block;
-    }
-
-    .dropdown-content a:hover{
-        text-decoration: underline;
-        background-color: grey;
-    }
-
-    .show{
-        display: block}
-
-    
