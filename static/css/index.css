@@ -1,11 +1,11 @@
 @font-face {
     font-family: GothBlack;
-    src: url(static\fonts\GothamBlack.otf);
+    src: url(/static/fonts/GothamBlack.otf);
 }
 
 @font-face {
     font-family: GothThin ;
-    src: url(static\fonts\GothamThinRegular.otf);
+    src: url(/static/fonts/GothamThinRegular.otf);
 }
 
 body{
@@ -98,7 +98,7 @@ body{
     }
 
 .div3{
-    position: absolute; left: 40%; bottom: 5%; 
+    position: absolute; left: 50%; bottom: 5%; 
     width: 35%; height: 60%;
 }
 .myimg2{
