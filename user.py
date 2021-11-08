@@ -1,5 +1,3 @@
-from ctypes import c_ushort
-from os import curdir
 from flask_login import UserMixin
 
 
