@@ -1,0 +1,16 @@
+<html>
+
+
+<body>
+<form method="post" action="/submit" enctype="multipart/form-data">
+    <input type="text" id="id" name="id" value="{{id}}" hidden>
+    <label for="handle">Handle:</label><br>
+    <input type="text" id="handle" name="handle" required><br>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required value="{{name}}"><br>
+    <label for="email">email:</label><br>
+    <input type="text" id="email" name="email" required value="{{email}}"><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

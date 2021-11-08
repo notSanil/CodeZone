@@ -9,6 +9,7 @@ import google.auth.transport.requests
 from google.oauth2 import id_token
 from flask_login import LoginManager, current_user
 from pip._vendor import cachecontrol
+from flask.helpers import url_for
 
 from user import User
 from db_handler import db
@@ -48,9 +49,25 @@ def loadUser(userid):
     return User.get(userid, database)
 
 
-@app.route("/", methods=['GET', "POST"])
+@app.route("/", methods=['GET'])
 def index():
     return render_template('index.html')
+
+@app.route("/get_handle", methods=['GET', 'POST'])
+def get_handle():
+    user = User.get(request.args['g_id'], database)
+    print(user._name)
+    return render_template("get_handle.html", id=request.args['g_id'], name=user._name, email=user._email)
+
+@app.route("/submit", methods=["GET", "POST"])
+def submit():
+    id = request.form['id']
+    handle = request.form['handle']
+    name = request.form['name']
+    email = request.form['email']
+    user = User.update(id, name, email, handle, database)
+    login_user(user)
+    return redirect("/dashboard")
 
 
 @app.route("/about")
@@ -71,6 +88,8 @@ def practice():
 
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
+    if current_user.is_authenticated:
+        return redirect("/dashboard")
     authorization_url, state = flow.authorization_url()
     session["state"] = state
     return redirect(authorization_url)
@@ -103,11 +122,17 @@ def callback():
         request=token_request,
         audience=CLIENT_ID
     )
+    print(idToken['name'])
+
+    if not User.get(idToken["sub"], database): # Brand new user
+        User.create_no_handle(idToken['sub'], idToken['name'], idToken['email'], database)
+        return redirect(url_for("get_handle", g_id=idToken["sub"]))
     
-    user = User(idToken["sub"], idToken["name"], idToken["email"])
-    if not User.get(user.id, database):
-        user.create(user.id, user._name, user._email, database)
-    login_user(user)    
+    if not User.get_handle(idToken['sub'], database):
+        return redirect(url_for("get_handle", g_id=idToken['sub']))
+
+    user = User.get(idToken["sub"], database)
+    login_user(user)
 
     return redirect("/dashboard")
 
