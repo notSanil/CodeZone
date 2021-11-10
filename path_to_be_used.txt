@@ -1,63 +1,38 @@
-basic syntactical questions
-    basic strings
-        formatting
-    ints
-        basic calculator
-    floats
-        precision print
-    loops
+Bronze:
+	math
+	implementation
+	sorting
+	binary search
+	two-pointer
+	recursion
+Silver:
+	greedy
+	divide and conquer
+   	data structures
+	bitmasks
+	combinatorics
+Gold:
+	number theory
+	dp - I ( rating <= 1600)
+   	Trees + DFS
+	Trees only
+	DSU	
+    Graphs + DFS
+	Graphs only
+	DFS and similar (no trees/graphs)
+Platinum:
+	2-sat
+	dp - II(rating > 1600)
+	game theory
+	fft
 
-data structures
-    arrays
-        array manipulation
-        2D matrix
-        prefix sum type questions
-    Sets, finding subset problems, etc.
-    Trees
-	DFS
-	DSU
-	BFS
-    Graphs
-    Sparse Table
-    Segment Trees
+Rating <= 2600.....usse zyada wale qns nahi.
+Constructive ke qns include krne h.
 
+Level - 1 : < 1200
+Level - 2 : <=1500
+Level - 3 : <= 1800
+Level - 4 : rest all
 
-algorithms
-    recursion
-        fibonacci
-        slowly increasing the level of questions
-
-    sorting algorithms
-        selection sort
-        bubble sort
-        insertion sort
-        merge sort
-        quick sort
-        counting sort
-    
-    searching techniques
-        linear search
-        binary search
-        ternary search
-
-    backtracking
-        crossword solving
-        encryption-decryption
-
-    number theory
-        basic modulus questions
-        primes
-        calculate (a^b)%p in logb TC
-
-
-    greedy
-
-
-    a gist of dynamic programming
-        solving fibonacci and some basic dp problems
-        
-    Divide-and-conquer algorithms
     
 
-While providing questions, we can combine data structures and algorithms to choose the right questions.
-Akele ds ya akele algo ke qns nahi honge mostly.
