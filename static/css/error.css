@@ -1,0 +1,38 @@
+@import url('http://fonts.cdnfonts.com/css/gotham');
+
+.full-pg {
+    top:  0;
+    left: 0;
+    height: 96vh;
+    width: 100%;	
+}
+
+@media all and (display-mode:  browser){
+h2 {
+    position: absolute;
+    top: 64.50%;
+    left: 44.25%;
+    font-size: 22px;
+    font-family: 'Gotham Light', sans-serif;
+
+    }
+}
+
+@media all and (display-mode:  fullscreen) {
+h2 {
+    position: absolute;
+    top: 67.50%;
+    left: 44.50%;
+    font-size: 24px;
+    font-family: 'Gotham Light', sans-serif;
+
+    }
+}
+
+a:visited {
+    color:  black;
+}
+
+a:hover {
+    color: gray;
+}
