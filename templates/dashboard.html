@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>LandingPage</title>
-        <link rel="stylesheet" href="/static/css/dashboard.css">
-        <script src="/static/js/dashboard.js"></script>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="static\css\dashboard.css">
+        <script src="static\js\dashboard.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
 <body>
     <nav class="mynav">
-        <a href="/dashboard"><button class="stdiconbtn tooltip"><span class="tooltiptext"> Home </span></button></a>
-        <input type="text" placeholder="Search" class="srchbar">
-        <button class="btn1"> Search </button>
-        <a href='/logout'><button class="btn2"> Log-Out </button></a>
-        <a href='#'><button class="btn2"> Contests </button></a>
-        <a href='#'><button class="btn2"> About </button></a>
-        <a href='#'><button class="profilebtn tooltip"><span class="tooltiptext"> You </span></button></a>
+        <a class="navlogo" href="/dashboard"> <img src="static\img\dashboard_images\Logo.svg" class="logobtn"></a>
+        <a href="/" class="lnk1"> Sign-Out </a>
+        <a href="/about" class="lnk1"> About </a>
+        <a href="#" class="lnk1"> <img src="static\img\dashboard_images\Profile_Pic.png" alt="Profile" class="logobtn2"></a>
     </nav>
-</body>    
+    <div class="div1">
+        <span class="header"><strong> COMPETE </strong></span>
+        <p class='hdrtxt'> Solve questions accurately as reccomended by our state of the art system which takes into consideration your current skill level, previously solved questions and most probable future paths. Earn XP and level up faster by solving these in minimal attempts with maximum precision.</p>
+        <a href="/compete" style="text-decoration: none;position: relative; bottom:1vh;"><span class="lnktxt"> GO TO COMPETE ZONE&#8594</span></a>        
+    </div>
+    <div class="div2">
+        <span class="header"><strong> PRACTICE </strong></span>
+        <p class="hdrtxt"> Practice to your heart's content across a variety of problems which have been curated and rated by experts around the globe. practice makes perfect and in programming, no truer statement exists!! So keep moving on and expand your horizons.</p>
+        <a href="/practice" style="text-decoration: none;"><span class="lnktxt"> GO TO PRACTICE ZONE&#8594</span></a>
+    </div>
+    <div class="div3">
+        <span class="header"><strong> CONTESTS </strong></span>
+        <p class="hdrtxt"> Participate in events with people across the globe and see how you comapre! Who knows, you might find that you are better than you may think of yourself. See how the best across the world solve questions at an astonishing speed and learn the tricks of the trade in some of the top contests.</p>  
+        <a href='#' style="text-decoration: none;"><span class="lnktxt"> GO TO CONTESTS&#8594</span></a>
+    </div>
+    <div class="div4">
+        <span class="header"><strong> PROFILE </strong></span>
+        <p class="hdrtxt2"> XP FOR NEXT LEVEL: </p>
+        <p class="hdrtxt2"> CURRENT LEVEL: </p>
+        <a href="#" style="text-decoration: none;"><span class="lnktxt2"> VIEW PROFILE&#8594</span></a>    
+</body>
 </html>
