@@ -28,7 +28,8 @@ class db:
             conn = self.get_conn()
             cursor = conn.cursor()
             cursor.execute("""CREATE TABLE IF NOT EXISTS {}(id text PRIMARY KEY, 
-            name TEXT NOT NULL, email text, handle text)""".format(self.TNAME))
+            name TEXT NOT NULL, email text, handle text, xp int DEFAULT 0)""".format(self.TNAME))
+            cursor.execute("commit")
             self.database = cursor
         
         return self.database
