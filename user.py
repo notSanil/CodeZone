@@ -13,7 +13,6 @@ class User(UserMixin):
         cursor = _db.get_db()
         cursor.execute("SELECT * FROM userdata where id='{}'".format(userid))
         result = cursor.fetchone()
-        print(result)
         if not result:
             return None
         return User(result[0], result[1], result[2], result[3])        

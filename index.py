@@ -56,7 +56,6 @@ def index():
 @app.route("/get_handle", methods=['GET', 'POST'])
 def get_handle():
     user = User.get(request.args['g_id'], database)
-    print(user._name)
     return render_template("get_handle.html", id=request.args['g_id'], name=user._name, email=user._email)
 
 @app.route("/submit", methods=["GET", "POST"])
@@ -122,7 +121,6 @@ def callback():
         request=token_request,
         audience=CLIENT_ID
     )
-    print(idToken['name'])
 
     if not User.get(idToken["sub"], database): # Brand new user
         User.create_no_handle(idToken['sub'], idToken['name'], idToken['email'], database)
