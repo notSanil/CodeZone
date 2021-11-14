@@ -8,31 +8,53 @@
 }
 
 @media all and (display-mode:  browser){
-h2 {
+.btn {
     position: absolute;
-    top: 64.50%;
-    left: 44.25%;
+    top: 65.50%;
+    left: 43.25%;
     font-size: 22px;
     font-family: 'Gotham Light', sans-serif;
+    background-color: turquoise;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 32px;
 
     }
 }
 
 @media all and (display-mode:  fullscreen) {
-h2 {
+.btn {
     position: absolute;
     top: 67.50%;
-    left: 44.50%;
+    left: 42%;
     font-size: 24px;
     font-family: 'Gotham Light', sans-serif;
+    background-color: turquoise;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 32px;
 
     }
 }
 
-a:visited {
+.btn:visited {
     color:  black;
 }
 
-a:hover {
-    color: gray;
+.btn:hover {
+    color: blue;
+    text-decoration: underline;
+    transform: scale(1.155);
 }
