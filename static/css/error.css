@@ -1,0 +1,60 @@
+@import url('http://fonts.cdnfonts.com/css/gotham');
+
+.full-pg {
+    top:  0;
+    left: 0;
+    height: 96vh;
+    width: 100%;	
+}
+
+@media all and (display-mode:  browser){
+.btn {
+    position: absolute;
+    top: 65.50%;
+    left: 43.25%;
+    font-size: 22px;
+    font-family: 'Gotham Light', sans-serif;
+    background-color: turquoise;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 32px;
+
+    }
+}
+
+@media all and (display-mode:  fullscreen) {
+.btn {
+    position: absolute;
+    top: 67.50%;
+    left: 42%;
+    font-size: 24px;
+    font-family: 'Gotham Light', sans-serif;
+    background-color: turquoise;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 32px;
+
+    }
+}
+
+.btn:visited {
+    color:  black;
+}
+
+.btn:hover {
+    color: blue;
+    text-decoration: underline;
+    transform: scale(1.155);
+}
