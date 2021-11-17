@@ -25,7 +25,7 @@ with open('user_data.csv', 'a') as f_object:
             continue
         # extracting freq map from X[i][problem] and generating the XP and relevant score
         xp = XP(df.iloc[i],getrating[d['problem_id']])
-        d['score'] = xp/500
+        d['score'] = (xp - getrating[d['problem_id']] + 590)/138.0
         d['XP'] = xp
         # Pass this file object to csv.writer() and get a writer object
         writer_object = writer(f_object)
