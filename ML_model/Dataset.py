@@ -16,7 +16,7 @@ def XP(freq, rating):
         rating -= min(n,freq[key])*f
     return rating
 
-with open('user_data.csv', 'a') as f_object:
+with open('user_data_1.csv', 'a') as f_object:
     for i in range(len(df.iloc[:, 0])):
         d = {}
         d['username'] = 'dhruv_bansal15'
