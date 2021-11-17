@@ -17,7 +17,7 @@ data, size = ml.loadProblemLens()
 size = 1 - 292805/size
 trainSet, testSet = train_test_split(data, test_size=size, shuffle=False)
 
-trainSet = trainSet.build_full_trainset()
+# trainSet = trainSet.build_full_trainset()
 
 sim_options = {
                 'name': 'cosine',
