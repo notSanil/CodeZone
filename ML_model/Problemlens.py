@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 class ProblemLens:
 
-    ratingsPath = '/Users/uttammittal02/Desktop/CodeZone/user_data.csv'
+    ratingsPath = '/Users/uttammittal02/Desktop/CodeZone/user_data_1.csv'
     problemsPath = '/Users/uttammittal02/Desktop/CodeZone/problem_set.csv'
 
     def loadProblemLens(self):
