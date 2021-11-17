@@ -75,7 +75,7 @@ body {
     padding: 4px;
 }
 
-.practice_text {
+.compete_text {
     text-align: center;
     border-radius: 64px;
     border-width: 3px;
@@ -90,10 +90,11 @@ body {
     font-weight: bold;
     color: whitesmoke;
     font-family: 'Gotham Medium', sans-serif;
-    text-shadow: 5px 5px 8px wheat;    
+    text-shadow: 5px 5px 8px wheat;
+    
 }
 
-.practice_text:hover {
+.compete_text:hover {
     transform: scale(1.05);
     text-decoration: underline;
     text-decoration-color: grey;
@@ -125,6 +126,7 @@ p:hover {
     margin-left: 6vh;
     margin-top: 1.5vh;        
 }
+
 
 ::-webkit-scrollbar {
     width: 16px;
