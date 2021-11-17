@@ -6,7 +6,7 @@ import heapq
 from collections import defaultdict
 from operator import itemgetter
 import pandas as pd      
-testSubject = 'dhruv_bansal15'#username of the person whose predictions we want
+testSubject = 'uttammittal02'#username of the person whose predictions we want
 k = 10
 ml = ProblemLens()
 data, size = ml.loadProblemLens()
@@ -22,15 +22,17 @@ simsMatrix = df.values.tolist()     #loading the similarity matrix obtained by t
 testUserInnerID = testSet.to_inner_uid(testSubject)
 # Get the top K items we rated
 testUserRatings = testSet.ur[testUserInnerID]
-kNeighbors = heapq.nlargest(k, testUserRatings, key=lambda t: t[1])
+# kNeighbors = heapq.nlargest(k, testUserRatings, key=lambda t: t[1])
 
 # Get similar items to stuff we liked (weighted by score)
 candidates = defaultdict(float)
 for itemID, rating in testUserRatings:
+    if (rating <= 4.4):
+        continue
     similarityRow = simsMatrix[itemID]
     for innerID, score in enumerate(similarityRow):
         candidates[innerID] += score * (rating / 5.0)
-
+# print(candidates)
 # Build a dictionary of stuff the user has already seen
 solved = {}
 for itemID, rating in testSet.ur[testUserInnerID]:
@@ -45,7 +47,7 @@ for itemID, ratingSum in sorted(candidates.items(), key=itemgetter(1), reverse=T
         problemID = int(problemID)
         contestID = problemID//60
         index = problemID%60
-        print(contestID, index, ratingSum)
+        print(contestID, index)
         pos += 1
         if (pos > 10):
             break
