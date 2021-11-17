@@ -13,6 +13,7 @@ from flask.helpers import url_for
 
 from user import User
 from db_handler import db
+import generate_random
 
 app = Flask(__name__)
 app.debug = True
@@ -79,7 +80,8 @@ def compete():
 
 @app.route("/leaderboard")
 def leaderboard():
-    return render_template('leaderboard.html')
+    random_strings = generate_random.generate_strings(10)
+    return render_template('leaderboard.html', data=random_strings)
 
 @app.route("/practice")
 def practice():

@@ -2,8 +2,8 @@
 <html>
     <title>Leaderboard</title>
     <body>
-        <div>
-            <p> Leaderboard Page</p>
-        </div>
+        {%for name in data%}
+        <div>{{name}}</div>
+        {%endfor%}
     </body>
 </html>
