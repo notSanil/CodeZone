@@ -85,6 +85,10 @@ def leaderboard():
 def practice():
     return render_template('practice.html')
 
+@app.route("/profilepage")
+def profilepage():
+    return render_template('profilepage.html')
+
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
     if current_user.is_authenticated:
@@ -108,8 +112,8 @@ def dashboard():
 def callback():
     flow.fetch_token(authorization_response=request.url)
 
-    if not session["state"] == request.args["state"]:
-        abort(500)
+    #if not session["state"] == request.args["state"]:
+    #    abort(500)
 
     credentials = flow.credentials
     requestSession = requests.session()
