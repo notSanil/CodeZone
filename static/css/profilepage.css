@@ -1,0 +1,46 @@
+@font-face {
+    font-family: GothBlack;
+    src: url(/static/fonts/GothamBlack.otf);
+}
+
+@font-face {
+    font-family: GothThin ;
+    src: url(/static/fonts/GothamThinRegular.otf);
+}
+
+body{
+    size: 100%;
+    margin: 0;
+    background-color: #1d1d26 ;
+    height: 100vh;
+}
+
+.mynav{
+    background-color: transparent;
+    margin: 0;
+    padding: 0.75% 0.75%;
+    height: 10vh;
+    z-index: 100;
+}
+
+.logobtn{
+    position: relative;
+    width: 60px; height: 60px; border-radius: 50%;
+}
+    .logobtn:hover{
+        cursor: pointer;
+        opacity: 0.75;
+    }
+
+.lnk1{
+    position: relative; left: 65%; bottom: 5vh;
+    margin-right: 5%;
+    color: white;
+    font-family: GothThin;
+    text-decoration: none;
+    font-size: 125%;
+}
+    .lnk1:hover{
+        text-decoration: underline;
+        color: turquoise;
+    }
