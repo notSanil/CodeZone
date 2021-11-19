@@ -1,0 +1,94 @@
+@font-face {
+    font-family: GothBlack;
+    src: url(GothamBlack.otf);
+}
+
+@font-face {
+    font-family: GothThin ;
+    src: url(GothamThinRegular.otf);
+}
+
+body{
+    size: 100%;
+    margin: 0;
+    background-color: #1d1d26 ;
+    height: 100vh;
+}
+
+.mynav{
+    background-color: transparent;
+    margin: 0;
+    padding: 0.75% 0.75%;
+    height: 10vh;
+    z-index: 100;
+}
+
+.logobtn{
+    position: relative;
+    width: 60px; height: 60px; border-radius: 50%;
+}
+    .logobtn:hover{
+        cursor: pointer;
+        opacity: 0.75;
+    }
+
+.lnk1{
+    position: relative; left: 65%; bottom: 5vh;
+    margin-right: 5%;
+    color: white;
+    font-family: GothThin;
+    text-decoration: none;
+    font-size: 125%;
+}
+    .lnk1:hover{
+        text-decoration: underline;
+        color: turquoise;
+    }
+.logobtn2{
+    width: 40px; height: 40px; border-radius: 50%;
+    position: relative; top: 2vh;
+}
+    .logobtn2:hover{
+        opacity: 0.75;
+    }
+
+.infodiv{
+    display: inline-flex;
+    height: 60vh; width: 90vw;
+    position: relative;
+    margin: 5vw 10vh;
+    background-color: transparent;
+} 
+
+.stdimg{
+    height: 50%;
+    width: auto;
+    border-radius: 50%;
+    margin: 2vh 1vw;;
+}
+
+.tblinfo{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: transparent;
+    width: 80%; height: 60%;
+    grid-row-gap: 3px;
+    grid-column-gap: 3px;
+    text-align: center;
+    font-size: 175%;
+    font-family: GothThin;
+    border-radius: 2vw;
+}
+.tblinfo >div{
+    background-color: turquoise;
+    width: 100%; height: 100%;
+    position: relative; 
+}
+
+.graphdiv{
+    width: 25vw; height: 25vh; margin-left: 5vw;
+    padding: 2vw 2vh;
+    background-color: yellow;
+    position: relative; bottom: 20%;
+    display: inline-flex;
+}

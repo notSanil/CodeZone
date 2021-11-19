@@ -85,6 +85,10 @@ def leaderboard():
 def practice():
     return render_template('practice.html')
 
+@app.route("/profilepage")
+def profilepage():
+    return render_template('profilepage.html')
+
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
     if current_user.is_authenticated:
