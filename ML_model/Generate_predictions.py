@@ -1,5 +1,5 @@
 from surprise.model_selection import train_test_split
-from Problemlens import ProblemLens
+from ML_model.Problemlens import ProblemLens
 from collections import defaultdict
 from operator import itemgetter
 import pandas as pd
@@ -15,7 +15,7 @@ def recommendations(username = 'harasees_singh', k = 10) :
 
     testSet = data.build_full_trainset()
 
-    df = pd.read_csv('trained_data.csv')
+    df = pd.read_csv('./Ml_model/trained_data.csv')
     simsMatrix = df.values.tolist()     #loading the similarity matrix obtained by training model
 
     testUserInnerID = testSet.to_inner_uid(username)
@@ -45,9 +45,7 @@ def recommendations(username = 'harasees_singh', k = 10) :
         if not itemID in solved:
             problemID = trainset.to_raw_iid(itemID)
             problemID = int(problemID)
-            contestID = problemID//60
-            index = problemID%60
-            output.append((contestID, index))
+            output.append((problemID))
             pos += 1
             if (pos > k):
                 break

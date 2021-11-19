@@ -14,6 +14,7 @@ from flask.helpers import url_for
 from user import User
 from db_handler import db
 import generate_random
+from ML_model.Generate_predictions import recommendations
 
 app = Flask(__name__)
 app.debug = True
@@ -76,6 +77,9 @@ def about():
 
 @app.route("/compete", methods=['GET'])
 def compete():
+    if current_user.is_authenticated:
+        questions = recommendations(current_user.handle)
+        return render_template('compete.html', data=questions)
     return render_template('compete.html')
 
 @app.route("/leaderboard")

@@ -31,11 +31,10 @@
     
             <div class = "compete_text"> Compete Zone </div>
             
-            <div> <p> Problem 1</p>
-                  <p> Problem 2</p>
-                  <p> Problem 3</p>
-                  <p> Problem 4</p>
-                  <p> Problem 5</p>
+            <div>
+            {%for problem in data%}
+                <p>{{problem}}</p>
+            {%endfor%}
             </div>
     
         </div> 

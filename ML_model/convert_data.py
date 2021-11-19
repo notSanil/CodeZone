@@ -1,7 +1,7 @@
 import pandas as pd
-from generate_data import get_frequency
+from ML_model.generate_data import get_frequency
 
-db = pd.read_csv('./problem_set.csv')
+db = pd.read_csv('./ML_model/problem_set.csv')
 getrating = db.set_index('problem_id').to_dict()['rating']
 
 verdicts = {'CHALLENGED': (1,10),'COMPILATION_ERROR' : (2,10),'CRASHED' : (5,20),'FAILED': (1,10) , 'IDLENESS_LIMIT_EXCEEDED': (2,20), 'MEMORY_LIMIT_EXCEEDED':(2,50),'PRESENTATION_ERROR':(0,0), 'RUNTIME_ERROR': (5,20), 'SKIPPED': (0,0),'TIME_LIMIT_EXCEEDED': (4,20), 'WRONG_ANSWER' : (5,30), 'TESTING': (0,0), 'OK': (1,-100)}

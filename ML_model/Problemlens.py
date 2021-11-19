@@ -9,11 +9,11 @@ from surprise import Reader
 from collections import defaultdict
 import pandas as pd
 
-from convert_data import convert_into_df
+from ML_model.convert_data import convert_into_df
 class ProblemLens:
 
-    ratingsPath = './user_data_1.csv'
-    problemsPath = './problem_set.csv'
+    ratingsPath = './ML_model/user_data_1.csv'
+    problemsPath = './Ml_model/problem_set.csv'
 
     def loadProblemLens(self, username):
 
