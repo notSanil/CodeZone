@@ -1,9 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <title>Leaderboard</title>
-    <body>
-        <div>
-            <p> Leaderboard Page</p>
+    <head>
+
+        <title> Leaderboard </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+        <link href = "/static/css/leaderboard.css" rel = "stylesheet" type = "text/css">
+    
+    </head>
+    
+    
+<body>
+
+    <header>
+
+        <h1 class = "board"> Leaderboard </h1>	 
+        <div class = "home">
+            <li> <a href = "/logout"> Sign Out </li> </a>
+            <li> <a href = "/dashboard"> Dashboard </a> </li>
         </div>
-    </body>
+        <div>
+            <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" target = "_blank"> <img src = "/static/img/menu_icon.svg" alt = "Menu Icon" class = "menu-icon"> </a>
+        </div> 
+
+    </header>
+
+    <div>
+        <a href = "/dashboard"> <img src = "/static/img/logo_dark.svg" alt = "CodeZone logo" class = "logo"> </a>
+    </div>
+
+   
+    <div class = "container"> 
+       
+        <div class = "logo-div"> <img src = "/static/img/test_league_logo.webp" class = "league-logo"></div>
+
+        <div class = "board-heading"> 
+            <div class = "board-heading-text"> Rank </div>
+            <div class = "board-heading-text"> Name </div>
+            <div class = "board-heading-text"> Level </div>        
+            
+        </div>
+             
+        {%for name in data%}
+        <div class = "card">
+            <div> 1 </div> 
+            <div> {{name}} </div>
+            <div> Level </div>
+        </div>
+        {%endfor%}    
+
+    </div>       
+    
+
+</body>
+
 </html>
+
+
