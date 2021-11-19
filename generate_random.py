@@ -1,6 +1,6 @@
 import string    
 import random 
-str_len = 5 
+str_len = 15 
 
 
 def generate_strings(num):
