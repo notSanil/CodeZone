@@ -20,10 +20,10 @@ class ProblemLens:
         os.chdir(os.path.dirname(sys.argv[0]))
 
         score_dataset = 0
-
-        reader = Reader(line_format='user item rating timestamp', sep=',', skip_lines=1)
-        score_dataset = Dataset.load_from_file(self.ratingsPath, reader=reader)
         df = pd.read_csv(self.ratingsPath)
+        reader = Reader(line_format='user item rating timestamp', sep=',', skip_lines=1)
+        score_dataset = Dataset.load_from_df(df= df, reader=reader)
+        
         index = df.index
         number_of_rows = len(index)
         return score_dataset, number_of_rows
