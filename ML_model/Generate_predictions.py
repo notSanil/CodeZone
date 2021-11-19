@@ -1,8 +1,5 @@
-from surprise import Dataset, Reader, SVD, accuracy
 from surprise.model_selection import train_test_split
 from Problemlens import ProblemLens
-from surprise import KNNBasic
-import heapq
 from collections import defaultdict
 from operator import itemgetter
 import pandas as pd
@@ -11,7 +8,7 @@ import pandas as pd
 def recommendations(username = 'harasees_singh', k = 10) :
     #k = number of recommendations
     ml = ProblemLens()
-    data, size = ml.loadProblemLens()
+    data, size = ml.loadProblemLens(username)
 
     size = 1 - 292805/size # ratio of data that's part of our testSet
     trainset, testSet = train_test_split(data, test_size=size, shuffle=False)
@@ -21,7 +18,7 @@ def recommendations(username = 'harasees_singh', k = 10) :
     df = pd.read_csv('trained_data.csv')
     simsMatrix = df.values.tolist()     #loading the similarity matrix obtained by training model
 
-    testUserInnerID = testSet.to_inner_uid(testSubject)
+    testUserInnerID = testSet.to_inner_uid(username)
     # Get the top K items we rated
     testUserRatings = testSet.ur[testUserInnerID]
     # kNeighbors = heapq.nlargest(k, testUserRatings, key=lambda t: t[1])
@@ -56,3 +53,6 @@ def recommendations(username = 'harasees_singh', k = 10) :
                 break
 
     return output
+
+if __name__ == '__main__':
+    print(recommendations('notSanil'))

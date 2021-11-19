@@ -7,20 +7,24 @@ from surprise import Dataset
 from surprise import Reader
 
 from collections import defaultdict
-import numpy as np
 import pandas as pd
+
+from convert_data import convert_into_df
 class ProblemLens:
 
-    ratingsPath = '/Users/uttammittal02/Desktop/CodeZone/user_data_1.csv'
-    problemsPath = '/Users/uttammittal02/Desktop/CodeZone/problem_set.csv'
+    ratingsPath = './user_data_1.csv'
+    problemsPath = './problem_set.csv'
 
-    def loadProblemLens(self):
+    def loadProblemLens(self, username):
 
         # Look for files relative to the directory we are running from
         os.chdir(os.path.dirname(sys.argv[0]))
 
         score_dataset = 0
-        df = pd.read_csv(self.ratingsPath)
+        df = pd.read_csv(self.ratingsPath).iloc[:, 0:3]
+        userData = convert_into_df(username)
+        userDf = pd.DataFrame(userData).iloc[:, 0:3]
+        df = df.append(userDf, ignore_index=True)
         reader = Reader(line_format='user item rating timestamp', sep=',', skip_lines=1)
         score_dataset = Dataset.load_from_df(df= df, reader=reader)
         
@@ -87,3 +91,5 @@ class ProblemLens:
                     years[movieID] = int(year)
         return years
 
+if __name__ == '__main__':
+    ProblemLens().loadProblemLens('notSanil')
