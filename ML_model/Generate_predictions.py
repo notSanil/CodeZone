@@ -45,7 +45,7 @@ def recommendations(username = 'harasees_singh', k = 10) :
         if not itemID in solved:
             problemID = trainset.to_raw_iid(itemID)
             problemID = int(problemID)
-            output.append((problemID))
+            output.append(problemID)
             pos += 1
             if (pos > k):
                 break

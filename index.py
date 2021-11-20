@@ -1,6 +1,7 @@
 import os
 import requests
 import json
+import csv
 
 from flask import Flask, render_template, redirect, request, session, abort
 from flask_login.utils import login_user, logout_user
@@ -46,6 +47,12 @@ flow = Flow.from_client_secrets_file(
     redirect_uri="http://localhost:5000/signin/callback"
     )
 
+problem_set = {}
+with open('problem_data.csv', 'r', encoding='utf-8') as file:
+    rd = csv.reader(file)
+    for row in rd:
+        problem_set[int(row[0])] = [row[1], row[2], row[3]]
+
 @login_manager.user_loader
 def loadUser(userid):
     return User.get(userid, database)
@@ -79,7 +86,11 @@ def about():
 def compete():
     if current_user.is_authenticated:
         questions = recommendations(current_user.handle)
-        return render_template('compete.html', data=questions)
+        dat = []
+        for question in questions:
+            dat.append((problem_set[question][2], str(problem_set[question][0])+'/'+
+            str(problem_set[question][1])))
+        return render_template('compete.html', data=dat)
     return render_template('compete.html')
 
 @app.route("/leaderboard")
