@@ -32,11 +32,12 @@
     
             <div class = "compete_text"> Compete Zone </div>
             
-            <div> <p> Problem 1</p>
-                  <p> Problem 2</p>
-                  <p> Problem 3</p>
-                  <p> Problem 4</p>
-                  <p> Problem 5</p>
+            <div>
+            {%for problem, link in data%}
+                <a href="https://codeforces.com/problemset/problem/{{link}}" style="text-decoration: none" target = "_blank">
+                    <p>{{problem}}</p>
+                </a>
+            {%endfor%}
             </div>
     
         </div> 
