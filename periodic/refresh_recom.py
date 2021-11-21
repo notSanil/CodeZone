@@ -28,5 +28,5 @@ def refresh_recommendations():
             
 
 sched = BackgroundScheduler(daemon=True)
-sched.add_job(refresh_recommendations, 'interval', seconds=43)
+sched.add_job(refresh_recommendations, 'interval', seconds=43) # TODO: Change this to something more reasonable
 sched.start()

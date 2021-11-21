@@ -68,5 +68,5 @@ def refresh():
             
 
 sched = BackgroundScheduler(daemon=True)
-sched.add_job(refresh, 'interval', seconds=10)
+sched.add_job(refresh, 'interval', seconds=10) # TODO: Change this something more reasonable
 sched.start()
