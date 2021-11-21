@@ -15,7 +15,10 @@ from flask.helpers import url_for
 from user import User
 from db_handler import db
 import generate_random
-from ML_model.Generate_predictions import recommendations
+
+import pages.compete
+import periodic.refresh_recom
+import periodic.refresh_user
 
 app = Flask(__name__)
 app.debug = True
@@ -48,7 +51,7 @@ flow = Flow.from_client_secrets_file(
     )
 
 problem_set = {}
-with open('problem_data.csv', 'r', encoding='utf-8') as file:
+with open('./data/problem_data.csv', 'r', encoding='utf-8') as file:
     rd = csv.reader(file)
     for row in rd:
         problem_set[int(row[0])] = [row[1], row[2], row[3]]
@@ -84,14 +87,12 @@ def about():
 
 @app.route("/compete", methods=['GET'])
 def compete():
-    if current_user.is_authenticated:
-        questions = recommendations(current_user.handle)
-        dat = []
-        for question in questions:
-            dat.append((problem_set[question][2], str(problem_set[question][0])+'/'+
-            str(problem_set[question][1])))
-        return render_template('compete.html', data=dat)
-    return render_template('compete.html')
+    if not current_user.is_authenticated:
+        return redirect('/signin')
+    
+    dat = pages.compete.get_recommendations(current_user.id, database)
+    
+    return render_template('compete.html', data=dat)
 
 @app.route("/leaderboard")
 def leaderboard():
