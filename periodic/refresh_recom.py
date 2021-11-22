@@ -1,5 +1,6 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 import psycopg2
+import atexit
 
 from model.generate_predictions import recommendations
 
@@ -30,3 +31,6 @@ def refresh_recommendations():
 sched = BackgroundScheduler(daemon=True)
 sched.add_job(refresh_recommendations, 'interval', seconds=43) # TODO: Change this to something more reasonable
 sched.start()
+
+
+atexit.register(lambda: sched.shutdown())
