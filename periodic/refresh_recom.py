@@ -12,7 +12,7 @@ def refresh_recommendations():
     conn = psycopg2.connect(database='data', user='postgres', password='a', port=5432)
     cursor = conn.cursor()
 
-    _query = """Select id, handle, solved FROM userdata
+    _query = """Select id, handle, solved FROM userdata WHERE handle IS NOT NULL AND solved IS NOT NULL
     """
     insert_query = """UPDATE userdata
                     SET recommended='{1}'
