@@ -1,9 +1,12 @@
 import requests
 import json
 from apscheduler.schedulers.background import BackgroundScheduler
+import atexit
+
 import psycopg2
-from model.gen_data import XP
 import pandas
+
+from model.gen_data import XP
 
 
 def get_user_submission_stats(username):
@@ -70,3 +73,5 @@ def refresh():
 sched = BackgroundScheduler(daemon=True)
 sched.add_job(refresh, 'interval', seconds=10) # TODO: Change this something more reasonable
 sched.start()
+
+atexit.register(lambda: sched.shutdown())
