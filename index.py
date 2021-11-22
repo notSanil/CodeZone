@@ -14,11 +14,13 @@ from flask.helpers import url_for
 
 from user import User
 from db_handler import db
-import generate_random
 
 import pages.compete
+import pages.leadeboard
 import periodic.refresh_recom
 import periodic.refresh_user
+# End of imports
+
 
 app = Flask(__name__)
 app.debug = True
@@ -96,8 +98,8 @@ def compete():
 
 @app.route("/leaderboard")
 def leaderboard():
-    random_strings = generate_random.generate_strings(10)
-    return render_template('leaderboard.html', data=random_strings)
+    res = pages.leadeboard.create_league_leadeboard(current_user.id, database)
+    return render_template('leaderboard.html', data=res)
 
 @app.route("/practice")
 def practice():

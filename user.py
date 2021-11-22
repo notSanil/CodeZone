@@ -1,4 +1,5 @@
 from flask_login import UserMixin
+import math
 
 
 class User(UserMixin):
@@ -60,4 +61,18 @@ class User(UserMixin):
         cursor.execute("commit")
 
         return User.get(userid, _db)
+
+    @staticmethod
+    def get_xp(userid, _db):
+        cursor = _db.get_db()
+        cursor.execute("SELECT xp FROM userdata WHERE id='{}'".format(userid))
+        res = cursor.fetchone()[0]
+        return res
+
+    @staticmethod
+    def get_level(userid, _db):
+        xp = User.get_xp(userid, _db)
+        level = xp / 100
+        level = math.pow(level, 1/3)
+        return int(level)
     
