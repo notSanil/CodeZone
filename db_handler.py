@@ -28,7 +28,7 @@ class db:
             conn = self.get_conn()
             cursor = conn.cursor()
             cursor.execute("""CREATE TABLE IF NOT EXISTS {}(id text PRIMARY KEY, 
-            name TEXT NOT NULL, email text, handle text, xp int DEFAULT 0, 
+            name TEXT NOT NULL, email text, handle text, xp int DEFAULT 100, 
             solved json, recommended json DEFAULT '[]'::json)""".format(self.TNAME))
             cursor.execute("commit")
             self.database = cursor
