@@ -123,17 +123,23 @@ def trending():
 
 @app.route("/dashboard", methods=['GET'])
 def dashboard():
-    if current_user.is_authenticated:
-        return render_template("dashboard.html")
-
-    return "Temp text to show user is not signed in"
+    if not current_user.is_authenticated:
+        return redirect("/signin")
+    
+    level = User.get_level(current_user.id, database)    
+    xp = User.get_xp(current_user.id, database)
+    league = User.get_league(current_user.id, database)
+    xp_to_next = ((level + 1) ** 3) * 100
+    perc = (xp / xp_to_next) * 100
+    return render_template("dashboard.html", name=current_user._name, lev=level, 
+    xp=xp, leag=league, next=int(perc))    
 
 @app.route("/signin/callback", methods=["GET"])
 def callback():
     flow.fetch_token(authorization_response=request.url)
 
-    #if not session["state"] == request.args["state"]:
-       # abort(500)
+    if not session["state"] == request.args["state"]:
+        abort(500)
 
     credentials = flow.credentials
     requestSession = requests.session()
