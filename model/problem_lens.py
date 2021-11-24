@@ -15,13 +15,13 @@ from model.gen_data import convert_into_df
 
 class ProblemLens:
 
-    ratingsPath = './data/user_data_1.csv'
-    problemsPath = './data/problem_set.csv'
+    ratingsPath = 'data\\user_data_1.csv'
+    problemsPath = 'data/problem_set.csv'
 
     def loadProblemLens(self, username, solved):
 
         # Look for files relative to the directory we are running from
-        os.chdir(os.path.dirname(sys.argv[0]))
+        #os.chdir(os.path.dirname(sys.argv[0]))
 
         score_dataset = 0
         

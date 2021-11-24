@@ -1,160 +1,268 @@
-@font-face {
-    font-family: GothBlack;
-    src: url(/static/fonts/GothamBlack.otf);
+:root{
+    --white: white;
+    --black: black;
+    --dark-blue: #001333; /* Reverse is #ffeccc */
+    --orange: #f1884e;    /* Reverse is 0e77b1*/
+    --orange2: #f1884e;
 }
 
 @font-face {
     font-family: GothThin ;
-    src: url(/static/fonts/GothamThinRegular.otf);
+    src: url('/static/fonts/GothamThinRegular.otf');
+}
+
+html{
+    height: 100%;
+    margin: 0;
 }
 
 body{
-    size: 100%;
-    margin: 0;
-    background-color: #1d1d26 ;
-    height: 100vh;
+    size: 100% 100%;
+    margin: 0 0;
+    overflow-x: hidden;
+    background-color: var(--white);
 }
+
 
 .mynav{
+    margin: 2vh 0 0 0;
     background-color: transparent;
-    margin: 0;
-    padding: 0.75% 0.75%;
-    height: 10vh;
-    z-index: 100;
+    width: 100%; height: 10vh;
 }
 
-.navlogo{
-    width: 60px; height: 60px; border-radius: 50%;
-    position: sticky;
-}
-
-.logobtn{
-    position: relative;
-    width: 60px; height: 60px; border-radius: 50%;
-}
-    .logobtn:hover{
-        cursor: pointer;
-        opacity: 0.75;
+    .CZ{
+        position: relative; top: 25%; left: 3vw;
+        font-size: 150%;
+        color: var(--black);
     }
 
-.lnk1{
-    position: relative; left: 65%; bottom: 5vh;
-    margin-right: 5%;
-    color: white;
+    .homelink{
+        border-radius: 50%;
+        height: 30px; width: 30px;
+        position: relative; left: 35vw; top: 2vh;
+        align-self: center;
+    }
+    .homebtn{
+        border-radius: 50%;
+        height: 30px; width: 30px;
+        align-items: center;
+        border: none;
+        background-color: white;
+        color: var(--white);
+    }
+        .homebtn:hover{
+            cursor: pointer;
+            background-color: #f1884e;
+        }
+    .modebtn{
+        border-radius: 15px;
+        border: 1px solid var(--black);
+        background-color: var(--white);
+        color: var(--black);
+        padding: 2px 8px;
+    }
+        .modebtn:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    .homebtn2{
+        border-radius: 50%;
+        height: 30px; width: 30px;
+        align-items: center;
+        border: none;
+        background-color:white;
+        position: relative; 
+    }
+        .homebtn2:hover{
+            cursor: pointer;
+            background-color: #f1884e;
+        }
+
+    .myimg{
+        display: block;
+        width: 90%;
+        margin-left: auto; margin-right: auto;
+        size: 150% 150%;
+    }
+.div0{
     font-family: GothThin;
-    text-decoration: none;
-    font-size: 125%;
+    font-size: 150%;
+    background-color: transparent;
+    position: relative;
+    text-align: center;
+    padding: 2px 2px;
+    color: var(--black);
 }
-    .lnk1:hover{
-        text-decoration: underline;
-        color: turquoise;
-    }
-
-.logobtn2{
-    width: 40px; height: 40px; border-radius: 50%;
-    position: relative; top: 2vh;
-}
-    .logobtn2:hover{
-        opacity: 0.75;
-    }
 
 .div1{
-    position: relative; left: 10vw; 
-    width: 30vw; height: 35vh;
-    background-color: #30d5c8;
-    border-radius: 50px;
-    text-align: center;
     font-family: GothThin;
+    font-size: 125%;
+    background-color: transparent;
+    width: 17vw; height: 3vh;
+    position: absolute; left: 15vw; top: 28vh;
+    padding: 2px 2px;
+    text-align: center;
+    color: var(--black);
 }
-    .div1:hover{
-        width: 32vw; height: 37vh;
-        font-size: 105%;
-    }
+
 .div2{
-    position: relative; left: 60vw; bottom: 20vh;
-    width: 30vw; height: 35vh;
-    background-color: #30d5c8;
-    border-radius: 50px;
-    text-align: center;
-    font-family: GothThin;
+    position: absolute; left: 2vw;
+    background-color: transparent;
+    border: var(--black) 2px solid;
+    border-radius: 25px;
+    height: 15vh; width: 12vw;
+    color: var(--black);
 }
-    .div2:hover{
-        width: 32vw; height: 37vh;
-        font-size: 105%;
-    }
+
+
 .div3{
-    position: relative; left: 10vw; top:-25vh;
-    width: 30vw; height: 35vh;
-    background-color: #30d5c8;
-    border-radius: 50px;
-    text-align: center;
-    font-family: GothThin;   
+    position: absolute; left: 2vw; top: 35vh;
+    background-color: transparent;
+    border: var(--black) 2px solid;
+    border-radius: 25px;
+    height: 61vh; width: 12vw;
+    background-color: var(--orange);
+    border: none;
+    text-align: justify;
 }
-    .div3:hover{
-        width: 32vw; height: 37vh;
-        font-size: 105%;
-    }
+
 .div4{
-    position: relative; left: 60vw; bottom: 40vh;
-    width: 30vw; height: 35vh;
-    background-color: #30d5c8;
-    border-radius: 50px;
-    text-align: center;
-    font-family: GothThin; 
-}
-    .div4:hover{
-        width: 32vw; height: 37vh;
-        font-size: 105%;
-    }
-.header{
-    text-align: center;
-    font-family: GothBlack;
-    font-size: 150%;
-    color: #1d1d26;
-    position: relative; top: 1vh;
-}
-.hdrtxt{
+    position: absolute; left: 15vw; top: 35vh; 
+    border: var(--black) 1px solid;
+    border-radius: 25px;
+    height: 61vh; width: 25vw;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    text-align: left;
     font-family: GothThin;
-    color: #1d1d26;
-    padding-left: 2vw; padding-right: 2vw;
+    line-height: 150%;
 }
-
-.hdrtxt2{
+    .header1{
+        position: relative; left: 5%; bottom: 3%;
+        font-size: 200%;
+        margin-top: 4.5%;
+        height: 20%;
+        line-height: 125%;
+    }
+    .header2{
+        position: relative; left: 5%;
+        font-size: 100%;
+        color: var(--black);
+    }
+    .para1{
+        position: relative; left: 5%;
+        font-size: 100%;
+        margin-right: 5%;
+        color: var(--black);
+    }
+    .paralnk{
+        position: relative; left: 50%; bottom: 3%;
+        text-decoration: none;
+        color: var(--black);
+        
+    }
+    .parabtn{
+        border-radius: 25px; border: none;
+        width: 35%;
+        padding: 4px 4px;
+        background-color: var(--white);
+        color: var(--black);
+    }
+        .parabtn:hover{
+            background-color: var(--black);
+            color: var(--white);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+.div5{
+    position: absolute; left: 42vw; top: 35vh;
+    border: 1px gray solid;
+    border-radius: 25px;
+    height: 61vh; width: 25vw;
+    background-color: transparent;
+    color: var(--black);
+    text-align: left;
     font-family: GothThin;
-    color: #1d1d26;
-    align-self: left;
-    position: relative; top: 15%; right: 25%;
+    line-height: 150%;
 }
-
-.lnktxt{
-    margin-bottom: 1vh;
-    height: 10%;
-    background-color: transparent;
-    color: white;
-    width: 100%;
-    text-decoration: none;
-    font-family: GothBlack;
-    position: relative;
-}
-    .lnktxt:hover{
-        color: #1d1d26;
-        cursor: pointer;
-        text-decoration: underline;
+    .parabtn2{
+        border-radius: 25px; border: none;
+        width: 35%;
+        padding: 4px 4px;
+        background-color: var(--orange);
+        color: var(--black);
     }
+        .parabtn2:hover{
+            background-color: transparent;
+            color: var(--black);
+            text-decoration: underline;
+            cursor: pointer;
+        }
 
-.lnktxt2{
-    margin-bottom: 5px;
-    height: 10%;
+.div7{
+    position: absolute; left: 67vw; top: 10vh; 
     background-color: transparent;
-    color: white;
-    width: 100%;
-    position: relative; top: 30%;
-    text-decoration: none;
-    font-family: GothBlack;
+    width: 25vw; height: 30vh;
+    border-radius: 30px;
+    color: var(--black);
+    font-family: GothThin;
 }
-    .lnktxt2:hover{
-        color: #1d1d26;
-        cursor: pointer;
-        text-decoration: underline;
+    .circle{
+        width: 60px; height: 60px;border-radius: 50%;
+        position: relative;left: 40%; top: 5%;
+        background-color: var(--white);
+        background-image: conic-gradient(var(--orange2) 60%, white 0%);
+        align-items: center;
     }
-
+        .profileimg{
+            border-radius: 50%;
+            display: block;
+            margin-left: auto; margin-right: auto;
+            width: 75%;
+            position: relative; top:12.5%;
+        }
+        .name{
+            text-align: center;
+            position: relative; top: 20%;
+        }
+    .myspan{
+        margin-left: 10%; margin-right: 5%;
+        position: relative; top: 30%; left: 10px;
+        color: var(--black);
+    }
+.div8{
+    text-align: center; left: 67vw; top: 40vh;
+    color: var(--orange);
+    position: absolute;
+    width: 30vw; height: 54vh;
+    background-color: transparent;
+    border-radius: 30px ;
+    font-family: GothThin;
+    font-size: 125%;
+    overflow-y: scroll;
+}
+    .div8::-webkit-scrollbar{
+        width: 10px;
+    }
+    .div8::-webkit-scrollbar-track{
+        background-color: var(--white);
+        border:  2px var(--black) solid;
+        border-radius: 5px;
+    }
+    .div8::-webkit-scrollbar-thumb{
+        background-color: var(--orange2);
+        border-radius: 5px;
+        width: 60%
+    }
+        .div8::-webkit-scrollbar-thumb:hover{
+            cursor: pointer;
+        }
+    
+    .graphdiv{
+        background-color: transparent;
+        width: 88%; height: 43%; border-radius: 25px;
+        position: relative; left: 10%;
+        margin-top: 2%; 
+        border: 2px solid gray;       
+    }
+    
