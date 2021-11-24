@@ -9,24 +9,53 @@
 
     <body>
 
-        <div>
+        <ul>
+            <li  class = "site"> CodeZone  </li>
+            <li> <a href = "/dashboard"> <img src = "/static/img/Home.svg" alt = "Home" class = "home-img"> </a> </li>
+            <li> <a href = "/about"> <img src = "/static/img/About.svg" alt = "About" class = "about-img"> </a> </li>
+            <li> <a href = "/logout"> <img src = "/static/img/Logout.svg" alt = "Sign Out" class = "logout-img"> </a> </li>
+        </ul>
 
-            <nav class = "home">
-    
-                <li> <a href = "/logout"> Sign Out </a> </li>
-                <li> <a href = "/dashboard"> Dashboard </a> </li>
-    
-            </nav>
-    
-            <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" target = "_blank"> <img src = "/static/img/menu_icon.svg" alt = "Menu Icon" class = "menu-icon"> </a>
+        <div>
+            <img src = "/static/img/practice_pg_images/Practice.svg" alt = "Practice Illustration" class = "practice-pic">
         </div>
-    
-        <div>
 
-            <a href = "/dashboard"> <img src = "/static/img/logo_dark.svg" alt = "CodeZone logo" class = "logo"> </a>
-    
+        <div>
+            <img src = "/static/img/practice_pg_images/Practice_orange.svg" alt = "Heading" class = "practice_orange">
+        </div>
+
+        <div class = "container">
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"> Difficulty </button>
+                <div id="myDropdown" class="dropdown-content">
+                  <button href="#">Easy</button>
+                  <button href="#">Medium</button>
+                  <button href="#">Hard</button>
+                  <button href = "#"> Insane </button>
+                </div>
+              </div>
+            
+            <div class = "card_">
+                <div class = "card-text"> Problem 1 </div>                 
+            </div>
+            <div class = "card">
+                <div class = "card-text"> Problem 2 </div>                 
+            </div>
+            <div class = "card">
+                <div class = "card-text"> Problem 3 </div>                 
+            </div>
+            <div class = "card">
+                <div class = "card-text"> Problem 4 </div>                 
+            </div>
+            <div class = "card">
+                <div class = "card-text"> Problem 5 </div>                 
+            </div>
+            
+            
         </div>
         
+        <!-- 
         <div class = "container"> 
     
             <div class = "practice_text"> Practice Zone </div>
@@ -45,7 +74,25 @@
             </div>
     
         </div> 
-        
+        -->
+        <script>
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+        </script>
     
     
     </body>

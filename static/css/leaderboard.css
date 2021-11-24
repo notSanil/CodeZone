@@ -14,8 +14,8 @@
     padding: 0;
     overflow: hidden;
     position: absolute;
-    top: 5.75%;
-    right: 8%;
+    top: 4%;
+    right: 7.50%;
 }
 
 li {
@@ -30,29 +30,26 @@ li a {
     padding:  14px 16px;
     text-decoration: none;
     color: #1d1d26;
-    font-size: 24px;    
+    font-size: 22px;    
 }
 
 li a:hover {
-    text-decoration: underline;
-    background-color: #fffef2;
+    text-decoration: underline;   
+    text-underline-offset: 5px;
+    text-shadow: 3px 3px 70px #001333;
     font-size: 24px;
-    border-radius: 64px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: wheat;
     text-align: center;
-    padding: 13px;
+    color: #001333;
 }
 
 body {
-    background-color: turquoise;
+    background-color: #fee2ca;    
 }
 
 .menu-icon {
     position: absolute;
-    right: 3.75%;
-    top: 7.75%;
+    right: 3.50%;
+    top: 5.70%;
     width: 28px;
     height: 28px;
     margin: 0;
@@ -72,40 +69,69 @@ body {
     text-shadow: 4px 4px 6px #ff2300; 
 }
 
+.tile-div {
+    width: 40%;
+    margin-top: 7.50%;
+    margin-left: 2%;
+}
+
+.text-div {
+    width: 40%;
+    margin-bottom: 0em;
+    margin-left: 3.50%;
+}
+
+.leaderboard-tile {
+    font-size: 72px;
+    font-family: "Gotham Bold", sans-serif;
+    font-weight: 900;
+    color: #001333;
+    margin-top: 7.50%;
+    margin-left: 5%;
+    margin-bottom: -0.17em;     
+}
+
+.leaderboard-text {
+    font-size: 21px;
+    font-family: "Gotham Light", sans-serif;
+    font-weight: 900;
+    color: #001333;
+    margin-left: 1%;
+    margin-bottom: 0em;
+    text-align: justify;   
+}
+
+.celebrate-pic {
+    width: 88vh;
+    margin-top: 2.40%;
+}
+
 ::-webkit-scrollbar {
-    width: 16px;
-}
-
-::-webkit-scrollbar-track{
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 16px;
-}
-
-::-webkit-scrollbar-thumb{
-    background: lightslategray;
-    border-radius: 16px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: lightsteelblue;
+    width: 0;
 }
 
 .container {
-    background-color: #1d1d26;
-    height: 74vh;      
+    background-color: #001333;
+    height: 79vh;  
+    width: 45%;    
     color: #ccc;
-    margin-left: 7.50vh;
-    margin-top: 6.50vh;
-    margin-right: 7.50vh;
+    float: right;
+    position: absolute;
+    top: 15%;
+    right: 1.50%;
     font-size: 32px;
     font-family: "Gotham Light", sans-serif;
     border-radius: 16px;
     border-width: 3px;
     border-style: solid;
-    border-color: navy;
+    border-color: #001333;
     padding: 4px;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.container:hover {
     overflow-y: scroll;
+    cursor: pointer;
 }
 
 .league-logo {    
@@ -119,39 +145,42 @@ body {
 }
 
 .card {
-    border: 3px whitesmoke solid;
-    margin: 45px;
-    border-radius: 32px;
+    margin: 50px 25px 50px 25px;
+    border-radius: 64px;
     padding: 13px;
     font-size: 30px;
-    color: #c4c3d0;
-    font-family: 'Gotham Light', sans-serif;   
+    background-color: #fee2ca;
+    font-family: 'Gotham Light', sans-serif;  
     display: flex;
     justify-content: space-between;    
 }
 
-.board-heading {
-    font-size: 30px;
-    color: silver;
-    font-family: 'Gotham Light', sans-serif;    
-    padding: 13px;
-    margin: 18px 45px 10px 45px;   
-    display: flex;
-    justify-content: space-between; 
-    text-shadow: 3px 3px 7px wheat;
+.card-text {
+    margin: 5px 10px 5px 10px;
+    color: #001333;
 }
 
-.board-heading-text {
-    border: 3px wheat groove;
-    border-radius: 16px;
-    padding: 8px;  
-    color: whitesmoke;  
+.board-heading {
+    font-size: 30px;
+    color: #fee2ca;
+    font-family: 'Gotham Black', sans-serif;    
+    padding: 12px;
+    margin: 5%;   
+    display: flex;
+    justify-content: space-between; 
+}
+
+.board-heading-text { 
+    color: #fee2ca;  
 }
 
 .board-heading-text:hover {
     text-decoration: underline;
     cursor: pointer;
     text-underline-offset: 5px;
-    text-decoration-color: #fbfcfa;
+    text-decoration-color: #fee2ca;
 }
 
+html {
+    overflow-y: scroll;
+}

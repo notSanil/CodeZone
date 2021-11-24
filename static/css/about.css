@@ -1,7 +1,6 @@
 @import url('http://fonts.cdnfonts.com/css/gotham');
 	
-.full-pg {
-    
+.full-pg {   
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 25px;
@@ -209,8 +208,8 @@ h2 {
 .story-1 {		
     position: absolute;		
     top: 160%;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 90px;
+    margin-right: 90px;
     font-size: 36px;
     text-align: justify;
     word-spacing: 5px;
@@ -220,8 +219,8 @@ h2 {
 .story-2 {		
     position: absolute;		
     top: 185%;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 90px;
+    margin-right: 90px;
     font-size: 36px;
     text-align: justify;
     word-spacing: 5px;

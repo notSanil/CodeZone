@@ -14,7 +14,6 @@
 
     <header>
 
-        <h1 class = "board"> Leaderboard </h1>	 
         <div class = "home">
             <li> <a href = "/logout"> Sign Out </li> </a>
             <li> <a href = "/dashboard"> Dashboard </a> </li>
@@ -24,13 +23,35 @@
         </div> 
 
     </header>
-
+    
+    <div class = "tile-div"> 
+        <p  class = "leaderboard-tile"> Leaderboard </p>
+    </div>
+    <div class = "text-div"> 
+        <p  class = "leaderboard-text"> Our league-based leaderboard provides a comprehensive outlook on performance. With the distribution of leagues and XP-points, one can minutely monitor their progress. </p>
+    </div>
     <div>
-        <a href = "/dashboard"> <img src = "/static/img/logo_dark.svg" alt = "CodeZone logo" class = "logo"> </a>
+        <img src = "/static/img/leaderboard_images/Celebrate2.svg" alt = "Celebrate Leaderboard Rankings" class = "celebrate-pic">
     </div>
 
-   
-    <div class = "container"> 
+    <div class = "container">
+
+        <div class = "board-heading"> 
+            <div class = "board-heading-text"> Rank </div>
+            <div class = "board-heading-text"> Name </div>
+            <div class = "board-heading-text"> Level </div>                   
+        </div>
+
+        {%for name in data%}
+        <div class = "card">
+            <div class = "card-text"> 1 </div> 
+            <div class = "card-text"> {{name}} </div>
+            <div class = "card-text"> 3 </div>
+        </div>
+        {%endfor%} 
+
+    </div>
+    <!-- <div class = "container"> 
        
         <div class = "logo-div"> <img src = "/static/img/test_league_logo.webp" class = "league-logo"></div>
 
@@ -49,7 +70,7 @@
         </div>
         {%endfor%}    
 
-    </div>       
+    </div> -->   
     
 
 </body>
