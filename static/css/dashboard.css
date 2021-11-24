@@ -10,6 +10,10 @@
     font-family: GothThin ;
     src: url('/static/fonts/GothamThinRegular.otf');
 }
+@font-face {
+    font-family: GothBlack;
+    src: url('/static/fonts/GothamBlack.otf');
+}
 
 html{
     height: 100%;
@@ -34,6 +38,7 @@ body{
         position: relative; top: 25%; left: 3vw;
         font-size: 150%;
         color: var(--black);
+        font-family: GothBlack;
     }
 
     .homelink{
