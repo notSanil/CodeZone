@@ -1,11 +1,4 @@
 from user import User
-import math
-
-def xp_to_lev(xp):
-    level = xp / 100
-    level = math.pow(level, 1/3)
-    return int(level)
-
 
 def create_league_leadeboard(userid, db):
     level = User.get_level(userid, db)
@@ -23,6 +16,6 @@ def create_league_leadeboard(userid, db):
     res = cursor.fetchall()
     leaderboard = []
     for user in res:
-        lev = xp_to_lev(user[1])
+        lev = User.convert_xp_to_level(user[1])
         leaderboard.append((user[0], lev))
     return leaderboard

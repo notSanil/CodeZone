@@ -73,7 +73,13 @@ class User(UserMixin):
     def get_level(userid, _db):
         xp = User.get_xp(userid, _db)
         level = xp / 100
-        level = math.pow(level, 1/3)
+        level = round(math.pow(level, 1/3))
+        return int(level)
+
+    @staticmethod
+    def convert_xp_to_level(xp):
+        level = xp / 100
+        level = round(math.pow(level, 1/3))
         return int(level)
     
     @staticmethod
