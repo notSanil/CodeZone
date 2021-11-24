@@ -44,7 +44,7 @@ def refresh():
     conn = psycopg2.connect(database='data', user='postgres', password='a', port=5432)
     cursor = conn.cursor()
 
-    ratings = pandas.read_csv('./data/problem_set.csv')
+    ratings = pandas.read_csv('data\problem_set.csv')
     ratings = ratings.set_index('problem_id').to_dict()['rating']
     _query = """Select id, handle, recommended, xp FROM userdata
     """

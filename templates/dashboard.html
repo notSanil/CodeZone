@@ -6,34 +6,75 @@
         <script src="static\js\dashboard.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    </head>
-
-<body>
-    <nav class="mynav">
-        <a class="navlogo" href="/dashboard"> <img src="static\img\dashboard_images\Logo.svg" class="logobtn"></a>
-        <a href="/logout" class="lnk1"> Sign-Out </a>
-        <a href="/about" class="lnk1"> About </a>
-        <a href="/profilepage" class="lnk1"> <img src="static\img\dashboard_images\Profile_Pic.png" alt="Profile" class="logobtn2"></a>
-    </nav>
-    <div class="div1">
-        <span class="header"><strong> COMPETE </strong></span>
-        <p class='hdrtxt'> Solve questions accurately as reccomended by our state of the art system which takes into consideration your current skill level, previously solved questions and most probable future paths. Earn XP and level up faster by solving these in minimal attempts with maximum precision.</p>
-        <a href="/compete" style="text-decoration: none;position: relative; bottom:1vh;"><span class="lnktxt"> GO TO COMPETE ZONE&#8594</span></a>        
-    </div>
-    <div class="div2">
-        <span class="header"><strong> PRACTICE </strong></span>
-        <p class="hdrtxt"> Practice to your heart's content across a variety of problems which have been curated and rated by experts around the globe. practice makes perfect and in programming, no truer statement exists!! So keep moving on and expand your horizons.</p>
-        <a href="/practice" style="text-decoration: none;"><span class="lnktxt"> GO TO PRACTICE ZONE&#8594</span></a>
-    </div>
-    <div class="div3">
-        <span class="header"><strong> CONTESTS </strong></span>
-        <p class="hdrtxt"> Participate in events with people across the globe and see how you comapre! Who knows, you might find that you are better than you may think of yourself. See how the best across the world solve questions at an astonishing speed and learn the tricks of the trade in some of the top contests.</p>  
-        <a href='#' style="text-decoration: none;"><span class="lnktxt"> GO TO CONTESTS&#8594</span></a>
-    </div>
-    <div class="div4">
-        <span class="header"><strong> PROFILE </strong></span>
-        <p class="hdrtxt2"> XP FOR NEXT LEVEL: </p>
-        <p class="hdrtxt2"> CURRENT LEVEL: </p>
-        <a href="#" style="text-decoration: none;"><span class="lnktxt2"> VIEW PROFILE&#8594</span></a>    
+    </head>    
+    <body>
+        <nav class='mynav'>
+            <span class='CZ'><b>CodeZone</b></span>
+            <a href="/dashboard" class='homelink'> <button class='homebtn'><img src="static/img/dashboard_images/Home_Light.svg" alt="Home" id='home' style="position: relative; right: 15%; top: 3%"></button></a>
+            <a href="/about" class="homelink" style="position: relative;left: 43vw"> <button class='homebtn2'><img src='static/img/dashboard_images/qmark.svg' class='myimg'></button></a>
+            <input type="button" value="Light" onclick="MyFunction()" class="modebtn"  style="position: relative;left: 70vw; top:1vh" id='mode'>
+            <a href="/logout" class="homelink" style="position: relative;left: 75vw"> <button class="homebtn"><img src="static/img/dashboard_images/logout.svg" class='myimg' style="size: 200% 200%;"></button></a>
+        </nav>
+        <div class='div0'>
+            <span class="dboard"> <b>My Dashboard</b></span>
+        </div>
+    
+        <div class='div1'>
+            <span> <b>What's on your mind?</b></span>
+        </div>
+    
+        <div class="div2">
+            <p class="header2"> Problem of the Day</p>
+            <a href="#" class="paralnk" style="position: relative; right: 13%"> <span style="position: relative; right: 13%">Go&#8594</span> </a>
+    
+        </div>
+    
+        <div class="div3">
+            <p class="header2" style="position: relative; left: 15%"> <b>Leaderboard</b></p>
+            <p class='para1'> Bullshit Text</p>
+            <a href="/leaderboard" class="paralnk" style="position: relative; right: 13%"> <span style="position: relative; right: 13%">Go&#8594</span> </a>
+        </div>
+    
+        <div class="div4">
+            <p class="header1"> <b>Do you want to compete?</b></p>
+            <p class="header2" style="color: var(--white);"> You'll enter <b>Compete</b> Zone! </p>
+            <p class="para1" style="color: var(--white);"> Solve questions accurately as recommended by our state of the art system which takes into account your current skill level.</p>
+            <p class="para1" style="color: var(--white);"> Earn XP and level up faster by solving questions with maximum precision.</p>
+            <a href="/compete" class="paralnk"><button class="parabtn"> <b>Enter</b></button> </a>
+        </div>
+    
+        <div class="div5">
+            <p class="header1"> <b>Practice makes progress</b></p>
+            <p class="header2"> You'll enter <b>Practice</b> Zone! </p>
+            <p class="para1"> Practice to your heart's content across a variety of problems which have been crafted and rated by experts around the globe.</p>
+            <p class="para1"> Keep moving and expanding your horizons</p>
+            <a href="/practice" class="paralnk"><button class="parabtn2"> <b>Practice</b></button></a>
+        </div>
+    
+        <div class="div7">
+            <div class="circle">
+                <img src='static/img/dashboard_images/Profile_Pic_2.png' class='profileimg'>
+                <span class='name'> <b>Shaurya</b> </span>
+            </div>
+            <span class="myspan"> <b>420</b> </span>
+            <span class="myspan"> <b>69420</b> </span>
+            <span class="myspan"> <b>Platinum</b></span>
+            <span class="myspan"> <b>Level</b> </span>
+            <span class="myspan"> <b>XP</b> </span>
+            <span class="myspan" style="margin-left: 18%;"> <b>League</b></span>
+        </div>
+    
+        <div class="div8">
+            <span style="position: sticky; top:0; color: var(--black);"> <b>Analytics</b> </span>
+            <div class="graphdiv">
+                
+            </div>
+            <div class="graphdiv">
+    
+            </div>
+            <div class="graphdiv">
+    
+            </div>
+        </div>  
 </body>
 </html>
