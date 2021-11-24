@@ -221,15 +221,35 @@ body{
             width: 75%;
             position: relative; top:12.5%;
         }
-        .name{
-            text-align: center;
-            position: relative; top: 20%;
-        }
     .myspan{
         margin-left: 10%; margin-right: 5%;
         position: relative; top: 30%; left: 10px;
         color: var(--black);
     }
+
+.name{
+    position: absolute; left: 59.5vw; top: 22vh;
+    width: 40vw; height: 5vh;
+    background-color: transparent;
+    color: var(--black);
+    text-align: center;
+    font-family: GothThin;
+}
+   
+.div7_5{
+    position: absolute; top: 25vh; left: 66.5vw;
+    font-family: GothThin;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    width: 26vw; height: 9vh;
+}
+   .myspan{
+        position: relative; bottom: 20vh;
+        text-align: center;
+    }
+
 .div8{
     text-align: center; left: 67vw; top: 40vh;
     color: var(--orange);
