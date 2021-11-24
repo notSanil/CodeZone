@@ -76,3 +76,16 @@ class User(UserMixin):
         level = math.pow(level, 1/3)
         return int(level)
     
+    @staticmethod
+    def get_league(userid, _db):
+        lev = User.get_level(userid, _db)
+        lev -= 1
+        lev //= 5
+        if (lev == 0):
+            return "Bronze"
+        elif (lev == 1):
+            return "Silver"
+        elif (lev == 2):
+            return "Gold"
+        else:
+            return "Platinum"

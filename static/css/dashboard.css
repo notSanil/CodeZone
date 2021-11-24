@@ -211,7 +211,6 @@ body{
         width: 60px; height: 60px;border-radius: 50%;
         position: relative;left: 40%; top: 5%;
         background-color: var(--white);
-        background-image: conic-gradient(var(--orange2) 60%, white 0%);
         align-items: center;
     }
         .profileimg{
