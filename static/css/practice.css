@@ -144,11 +144,16 @@ body {
     font-size: 30px; 
 }
 
-.practice_orange {
-    height: 25vh;
-    width: 25vh;
+.head-text {    
     position: absolute;
-    right: 17%;
+    right: 15.50%;
+    margin-top: 3%;
+    font-size: 28px;
+    padding: 8px;
+    border-radius: 16px;
+    background-color: #F1884D;
+    font-family: "Gotham Black", sans-serif;
+    font-weight: 100;
 }
 
 .practice_text {
@@ -215,10 +220,14 @@ html {
     cursor: pointer;
     display: inline-block;
     border-radius: 16px;
+    font-family: "Gotham Light", sans-serif;
   }
   
   .dropbtn:hover, .dropbtn:focus {
     background-color: #CBD2E1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
   }
   
   .dropdown {
@@ -251,6 +260,7 @@ html {
     border-top: none;
     border-left: none;
     border-right: none;
+    font-family: "Gotham Light", sans-serif;
   }
 
   .dropdown-content button:last-child {
