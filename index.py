@@ -10,6 +10,7 @@ from google.oauth2 import id_token
 from flask_login import LoginManager, current_user
 from pip._vendor import cachecontrol
 from flask.helpers import url_for
+import pandas
 
 from user import User
 from db_handler import db
@@ -85,7 +86,14 @@ def leaderboard():
 
 @app.route("/practice")
 def practice():
-    return render_template('practice.html')
+    filename = 'data/sorted_problems.csv'
+    data = pandas.read_csv(filename, header=0)
+    data.columns = data.columns.str.strip()
+    easytbl = list(data[data['Rating']<=800].sample(20).values)
+    midtbl = list(data[(data['Rating']<=1600) & (data['Rating']>800)].sample(20).values)
+    hardtbl = list(data[(data['Rating']<=2500) & (data['Rating']>1600)].sample(20).values)
+    insanetbl = list(data[data['Rating']>2500].sample(20).values)
+    return render_template('practice.html', easytbl=easytbl, midtbl=midtbl, hardtbl=hardtbl, insanetbl=insanetbl)
 
 @app.route("/profilepage")
 def profilepage():
