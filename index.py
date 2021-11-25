@@ -87,16 +87,13 @@ def leaderboard():
 @app.route("/practice")
 def practice():
     filename = 'data/sorted_problems.csv'
-    data = pandas.read_csv(filename, header=0)
+    data = pandas.read_csv(filename, header=0).iloc[:,1:]
     data.columns = data.columns.str.strip()
-    easytbl = list(data[data['Rating']<=800].sample(5).values)
-    midtbl = list(data[(data['Rating']<=1600) & (data['Rating']>800)].sample(5).values)
-    hardtbl = list(data[(data['Rating']<=2500) & (data['Rating']>1600)].sample(5).values)
-    insanetbl = list(data[data['Rating']>2500].sample(5).values)
-    print("Easy:" , easytbl)
-    print("Medium:" , midtbl)
-    print("Hard:" , hardtbl)
-    print("Insane:" , insanetbl)
+    easytbl = list(data[data['Rating']<=800].sample(20).values)
+    midtbl = list(data[(data['Rating']<=1600) & (data['Rating']>800)].sample(20).values)
+    hardtbl = list(data[(data['Rating']<=2500) & (data['Rating']>1600)].sample(20).values)
+    insanetbl = list(data[data['Rating']>2500].sample(20).values)
+    print(easytbl)
     return render_template('practice.html', easytbl=easytbl, midtbl=midtbl, hardtbl=hardtbl, insanetbl=insanetbl)
 
 @app.route("/profilepage")

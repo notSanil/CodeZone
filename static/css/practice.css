@@ -129,7 +129,7 @@ body {
     top: 5vh;
     padding: 13px;
     background-color: #EFF3FF;  
-    display: none;  
+    display: none; 
 }
 
 .card1 {
@@ -140,6 +140,16 @@ body {
     padding: 13px;
     background-color: #EFF3FF; 
     display: block;   
+}
+
+.card2 {
+    margin: 50px 25px 50px 25px;
+    border-radius: 16px;
+    position: relative;
+    top: 5vh;
+    padding: 13px;
+    background-color: #EFF3FF; 
+    display: block; 
 }
 
 .card-text {
@@ -161,7 +171,6 @@ body {
     text-decoration: underline;
     text-underline-offset: 4px;
     cursor: pointer;
-    font-size: 24px;
 }
 
 .head-text {    
