@@ -5,6 +5,7 @@
         <title> Practice Zone </title>
         <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
         <link rel = "stylesheet" href = "/static/css/practice.css" type = "text/css">
+        <script src = "/static/js/practice.js"> </script>
     </head>
 
     <body>
@@ -27,30 +28,38 @@
             <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn"> Difficulty </button>
                 <div id="myDropdown" class="dropdown-content">
-                  <button href="#">Easy</button>
-                  <button href="#">Medium</button>
-                  <button href="#">Hard</button>
-                  <button href = "#"> Insane </button>
+                    <button value = "Easy" id = "easybtn" onclick="myFunction1()"> Easy </button>
+                    <button value = "Medium" id = "midbtn" onclick="myFunction2()"> Medium </button>
+                    <button value = "Hard" id = "hardbtn" onclick="myFunction3()"> Hard </button>
+                    <button value = "Insane" id = "insanebtn" onclick="myFunction4()"> Insane </button>
                 </div>
               </div>
             
-            <div class = "card_">
-                <div class = "card-text"> Problem 1 </div>                 
-            </div>
-            <div class = "card">
-                <div class = "card-text"> Problem 2 </div>                 
-            </div>
-            <div class = "card">
-                <div class = "card-text"> Problem 3 </div>                 
-            </div>
-            <div class = "card">
-                <div class = "card-text"> Problem 4 </div>                 
-            </div>
-            <div class = "card">
-                <div class = "card-text"> Problem 5 </div>                 
-            </div>
+            {% for data in easytbl %}
+                <div class = "card1" id = "easytbl">
+                    <div class = "card-text"> <a href = "#" class = "link" target = "_blank"> {{data[3]}} {{data[4]}}</a> </div>                 
+                </div>
+            {% endfor %}
+
+            {% for data in midtbl %}
+                <div class = "card" id = "midtbl">
+                    <div class = "card-text"> <a href = "#" class = "link" target = "_blank"> {{data[3]}} {{data[4]}}</a> </div>                 
+                </div>
+            {% endfor %}
+
+            {% for data in hardtbl %}
+                <div class = "card" id = "hardtbl">
+                    <div class = "card-text"> <a href = "#" class = "link" target = "_blank"> {{data[3]}} {{data[4]}}</a> </div>                 
+                </div>
+            {% endfor %}
+
+            {% for data in insanetbl %}
+                <div class = "card" id = "insanetbl">
+                    <div class = "card-text"> <a href = "#" class = "link" target = "_blank"> {{data[3]}} {{data[4]}}</a> </div>                 
+                </div>
+            {% endfor %}
             
-            
+                        
         </div>
         
         <!-- 

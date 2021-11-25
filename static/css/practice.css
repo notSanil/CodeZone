@@ -122,18 +122,24 @@ body {
     padding: 4px;
 }
 
-.card_ {
-    margin: 90px 25px 50px 25px;
-    border-radius: 16px;
-    padding: 13px;
-    background-color: #EFF3FF;    
-}
-
 .card {
     margin: 50px 25px 50px 25px;
     border-radius: 16px;
+    position: relative;
+    top: 5vh;
     padding: 13px;
-    background-color: #EFF3FF;    
+    background-color: #EFF3FF;  
+    display: none;  
+}
+
+.card1 {
+    margin: 50px 25px 50px 25px;
+    border-radius: 16px;
+    position: relative;
+    top: 5vh;
+    padding: 13px;
+    background-color: #EFF3FF; 
+    display: block;   
 }
 
 .card-text {
@@ -142,6 +148,20 @@ body {
     text-align: center;
     font-family: 'Gotham Light', sans-serif;
     font-size: 30px; 
+}
+
+.link {
+    font-size: 22px;
+    font-family: "Gotham Light", sans-serif;
+    color: #001333;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+    font-size: 24px;
 }
 
 .head-text {    
