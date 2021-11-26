@@ -1,5 +1,6 @@
 from flask_login import UserMixin
 import math
+import datetime
 
 
 class User(UserMixin):
@@ -33,11 +34,13 @@ class User(UserMixin):
     @staticmethod
     def create_no_handle(userid, name, email, _db):
         cursor = _db.get_db()
-        cursor.execute("INSERT INTO userdata values('{0}', '{1}', '{2}', NULL)".format(userid, \
-            name, email))
+        date = str(datetime.datetime.now().date())
+        cursor.execute("INSERT INTO userdata(id, name, email, handle, signin) values('{0}', '{1}', '{2}',\
+         NULL, '{3}')".format(userid, name, email, date))
         cursor.execute("commit")
 
         return User(userid, name, email, None)
+
     @staticmethod
     def get_handle(userid, _db):
         cursor = _db.get_db()
@@ -95,3 +98,31 @@ class User(UserMixin):
             return "Gold"
         else:
             return "Platinum"
+
+    @staticmethod
+    def get_q_per_day(userid, _db):
+        curr = _db.get_db()
+        curr.execute("""select qpd from userdata where id='{}'""".format(userid))
+        res = curr.fetchone()[0][1:]
+        return res
+    
+    @staticmethod
+    def get_xp_per_dat(userid, _db):
+        curr = _db.get_db()
+        curr.execute("""select xp_pd from userdata where id='{}'""".format(userid))
+        res = curr.fetchone()[0]
+        return res
+
+    @staticmethod
+    def get_rank_per_day(userid, _db):
+        curr = _db.get_db()
+        curr.execute("""select rpd from userdata where id='{}'""".format(userid))
+        res = curr.fetchone()[0]
+        return res
+
+    @staticmethod
+    def get_signup_date(userid, _db):
+        curr = _db.get_db()
+        curr.execute("""select signin from userdata where id='{}'""".format(userid))
+        res = curr.fetchone()[0]
+        return res

@@ -46,10 +46,10 @@ def refresh():
 
     ratings = pandas.read_csv('data\problem_set.csv')
     ratings = ratings.set_index('problem_id').to_dict()['rating']
-    _query = """Select id, handle, recommended, xp FROM userdata
+    _query = """Select id, handle, recommended, xp, qpd FROM userdata
     """
     insert_query = """UPDATE userdata
-                    SET solved='{1}', recommended='{2}', xp={3}
+                    SET solved='{1}', recommended='{2}', xp={3}, qpd='{4}'
                     WHERE id='{0}'"""
 
     cursor.execute(query=_query)
@@ -58,15 +58,17 @@ def refresh():
         stats: dict = get_user_submission_stats(row[1])
         if stats is None:
             continue
-        
         awarded = 0
         recom = set(row[2])
         for qId in stats:
             if qId in recom and stats[qId]['OK'] > 0:
                 recom.remove(qId)
                 awarded += XP(stats[qId], int(qId))
+        qpd = row[4]
+        if len(qpd) == 0:
+            qpd = [len(stats)]
         
-        cursor.execute(insert_query.format(row[0], json.dumps(stats), list(recom), awarded+row[3]))
+        cursor.execute(insert_query.format(row[0], json.dumps(stats), list(recom), awarded+row[3], qpd))
         cursor.execute("commit")
             
 
