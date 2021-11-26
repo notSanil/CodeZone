@@ -97,14 +97,21 @@ def compete():
     if not current_user.is_authenticated:
         return redirect('/signin')
     
+    level = User.get_level(current_user.id, database)
     dat = pages.compete.get_recommendations(current_user.id, database)
+    leg = User.get_league(current_user.id, database)
+    _xp = User.get_xp(current_user.id, database)
+    next_league = ((level - 1) // 5 + 1) * 5
+    next_xp = (next_league ** 3) * 100
+    diff = next_xp - _xp
     
-    return render_template('compete.html', data=dat)
+    return render_template('compete.html', data=dat, lev=level, league=leg, xp=_xp, difference=diff)
 
 @app.route("/leaderboard")
 def leaderboard():
     res = pages.leadeboard.create_league_leadeboard(current_user.id, database)
-    return render_template('leaderboard.html', data=res)
+    leg = User.get_league(current_user.id, database)
+    return render_template('leaderboard.html', data=res, league=leg)
 
 @app.route("/practice")
 def practice():

@@ -55,7 +55,10 @@ def rank_graph(rank, date):
     """
     dates_ = [date]
     while not (len(dates_) >= len(rank)):
-        dates_.append(date + datetime.timedelta(days= len(dates_)))    
+        dates_.append(date + datetime.timedelta(days= len(dates_))) 
+
+    if len(rank) == 0:
+        dates_ = []   
     
     a = plt.plot(dates_, rank, color = '#F1884D', linewidth = 5)
     plt.xlabel("Date")
@@ -83,6 +86,9 @@ def xp_graph(xp, date):
     dates_ = [date]
     while not (len(dates_) >= len(xp)):
         dates_.append(date + datetime.timedelta(days = len(dates_)))
+    
+    if len(xp) == 0:
+        dates_ = [] 
     dates_ = np.array(dates_)
     df = pd.DataFrame(xp)
     fig, ax = plt.subplots()

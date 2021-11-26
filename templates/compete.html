@@ -7,6 +7,7 @@
         <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
         <link rel = "stylesheet" href = "/static/css/compete.css" type = "text/css">
         <script src = "/static/js/compete.js"> </script>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     </head>
 
     <body>
@@ -32,9 +33,9 @@
         
         <div class = "stat-container"> 
             <div class = "stat-answer"> 
-                <div class = "stat-text"> 19 </div>
-                <div class = "stat-text"> Platinum </div>
-                <div class = "stat-text"> 10000</div>                   
+                <div class = "stat-text"> {{lev}} </div>
+                <div class = "stat-text"> {{league}} </div>
+                <div class = "stat-text"> {{xp}}</div>                   
             </div>
             <div class = "stat-heading">
                 <div class = "stat-heading-text"> Level </div>
@@ -44,7 +45,7 @@
 
         <div class = "go-container">
             <div class = "go-text-header"> Let's Go ! </div>
-            <div class = "go-text-1"> You're currently 4000 XP away from entering the next league. </div>
+            <div class = "go-text-1"> You're currently {{difference}} XP away from entering the next league. </div>
             <div class = "go-text-2"> Head over to our recommended problems which are meant only for you. </div>
         </div>
 
@@ -52,7 +53,7 @@
 
         {%for name, link in data%}
             <div class = "card">
-                <div class = "card-text"> {{name}} <a href = "https://codeforces.com/problemset/problem/{{link}}" class = "link"> </a> </div>
+                <div class = "card-text"> <a href = "https://codeforces.com/problemset/problem/{{link}}" class = "link">{{name}}  </a> </div>
             </div>
         {%endfor%}
         </div>
