@@ -1,147 +1,290 @@
 @import url('http://fonts.cdnfonts.com/css/gotham');
 
-.home {
+:root {
+    --navyblue: #001333;
+    --lightblue: #eff3ff;
+}
+
+ul {
     list-style-type: none;
-    margin:  0;
+    margin: 0;
     padding: 0;
+    height: 10vh;
     overflow: hidden;
+}
+
+.site {
     position: absolute;
+    left: 5%;
     top: 4.50%;
-    right: 10%;
+    height: 30px;
+    width: 150px;
+    font-size: 30px;    
+    font-family: "Gotham Black", sans-serif;
+    color: var(--navyblue);
+}
+
+.home-img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 47%;   
+    top: 4%; 
+}
+
+.home-img:hover {
+    transform: scale(1.1);
+}
+
+.about-img:hover {
+    transform: scale(1.1);
+}
+
+.logout-img:hover {
+    transform: scale(1.1);
+}
+
+.about-img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 53%;
+    top: 4%;
+}
+
+.logout-img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 5%;
+    top: 4%;
 }
 
 li {
-    float: right;
-    font-family: 'Gotham Light', sans-serif;		
+    float: left;
+    font-family: 'Gotham Light', sans-serif;
 }
 
 li a {
     display:  block;
-    color: white;
     text-align: center;
     padding:  14px 16px;
     text-decoration: none;
-    color: black;
     font-size: 24px;
 }
 
-li a:hover {
+.toggle {
+    font-size: 16px;
+    font-family: "Gotham Light", sans-serif;
+    background-color: var(--lightblue);
+    color: var(--navyblue);
+    border: 2px var(--navyblue) solid;
+    border-radius: 15px;
+    padding: 4px 12px;
+    position: absolute;
+    top: 5%;
+    left: 75%;
+}
+
+.toggle:hover {
+    cursor: pointer;
     text-decoration: underline;
-    background-color: #fffef2;
-    font-size: 24px;
-    border-radius: 64px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: wheat;
-    text-align: center;
-    padding: 13px;
+    text-underline-offset: 2px;
 }
 
 body {
-    background: turquoise;
-    color: #1d1d26;       
+    background: var(--lightblue);
+    color: #1d1d26;    
+    cursor: default;   
 }
 
-.menu-icon {
+.compete-div{
+    background-color: var(--navyblue);
     position: absolute;
-    right: 4%;
-    top: 6.25%;
-    width: 28px;
-    height: 28px;
+    top: 0;
+    bottom: 0;
+    width: 27.50%;
+    margin-top: 9vw;
+    margin-left: 1.50%;
+    margin-bottom: 1.50%;
+    border-radius: 24px;
 }
 
-.menu-icon:hover {
-    transform: scale(1.20)
+.compete-pic {
+    position: absolute;
+    bottom: 0;
+    margin-left: 7%;  
+    margin-right: 3%;
+    border-radius: 5px;
+
 }
 
-.container {
-    background-color: #1d1d26;
-    height: 75vh;      
-    color: #ccc;
-    margin-left: 5vh;
-    margin-top: 5vh;
-    margin-right: 5vh;
-    font-size: 32px;
+.compete-header {
+    font-family: "Gotham Thick", sans-serif;
+    color: var(--lightblue);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 7%;
+}
+
+.compete-text-1 {
+    font-size: 22px;
     font-family: "Gotham Light", sans-serif;
+    color: var(--lightblue);
+    margin-left: 7%;
+    margin-right: 7%;
     text-align: center;
-    align-content: center;
-    justify-content: center;
-    border-radius: 16px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: navy;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding: 4px;
 }
 
-.compete_text {
-    text-align: center;
-    border-radius: 64px;
-    border-width: 3px;
-    border-style: groove;
-    border-color: whitesmoke;
-    width: 55vh;
-    height: 6vh;
-    margin-top: 15px;
-    margin-left: 15px;
-    padding: 4px;
-    font-size: 38px;
-    font-weight: bold;
-    color: whitesmoke;
-    font-family: 'Gotham Medium', sans-serif;
-    text-shadow: 4px 4px 6px wheat;
+.compete-text-2 {
+    font-size: 22px;
+    font-family: "Gotham Light", sans-serif;
+    color: var(--lightblue);
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: justify;
+}
+
+.stats {
+    position: absolute;
+    left: 41%;
+    font-size: 32px;
+    font-family: "Gotham Black", sans-serif;
+    margin-top: 3.50%;
+    color: var(--navyblue);
     
 }
 
-.compete_text:hover {
-    transform: scale(1.05);
-    text-decoration: underline;
-    text-decoration-color: #fbfcfa;
-    cursor: pointer;
-    text-decoration-style: underline;
-    text-underline-offset: 5px;
+.stat-container {
+    background-color: var(--navyblue);
+    height: 20vh;
+    width: 28%;
+    position: absolute;
+    left: 31%;
+    top: 24%;   
+    border-radius: 24px;
+
 }
 
-p {
-    border: 3px whitesmoke solid;
-    margin: 45px;
-    border-radius: 32px;
+.stat-answer {
+    font-size: 28px;
+    font-family: 'Gotham Black', sans-serif;    
+    padding: 12px;
+    margin: 5% 1% 1% 10%;   
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-text {
+    color: var(--lightblue);
+    font-family: "Gotham Black", sans-serif;
+    font-weight: 100;
+}
+
+.stat-heading {
+    font-size: 20px;
+    font-family: 'Gotham Light', sans-serif;    
+    padding: 6px;
+    margin: 3% 2% 2% -2%;   
+    display: flex;
+    justify-content: space-around;
+    color: var(--lightblue);
+}
+
+.stat-heading-text {
+    color: var(--lightblue);
+    justify-content: space-around;
+    font-family: "Gotham Light", sans-serif;
+}
+
+.go-container {
+    background-color: #F1884D;
+    height: 48.40vh;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 125%;  
+    border-radius: 24px;  
+}
+
+.go-text-header {
+    font-size: 32px;
+    font-family: "Gotham Black", sans-serif;
+    text-align: center;
+    color: var(--lightblue);
+    margin-top: 5%;
+}
+
+.go-text-1 {
+    font-size: 23px;
+    font-family: "Gotham Light", sans-serif;
+    color: var(--lightblue);
+    margin: 12% 3% 0 10%;
+    width: 80%;
+    text-align: justify;
+}
+
+.go-text-2 {
+    font-size: 23px;
+    font-family: "Gotham Light", sans-serif;
+    color: var(--lightblue);
+    margin: 12% 3% 0 10%;
+    text-align: justify;
+    width: 80%;    
+}
+
+.container {
+    background-color: var(--navyblue);
+    height: 80.50vh;  
+    width: 130%;       
+    position: absolute;
+    top: -45%;
+    right: -145%;   
+    margin-right: 4%;
+    font-size: 32px;
+    font-family: "Gotham Light", sans-serif;
+    border-radius: 24px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--navyblue);
+    padding: 4px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.card {
+    margin: 50px 25px 50px 25px;
+    border-radius: 16px;
     padding: 13px;
-    font-size: 30px;
-    color: #c4c3d0;
-    font-family: 'Gotham Light', sans-serif;
+    font-size: 22px;
+    background-color: var(--lightblue);
+    font-family: 'Gotham Light', sans-serif;          
 }
 
-p:hover {
+.card-text {
+    margin: 5px 10px 5px 10px;
+    color: var(--navyblue);
+    text-align: center;
+}
+
+.link {
+    font-size: 22px;
+    font-family: "Gotham Light", sans-serif;
+    color: var(--navyblue);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
     cursor: pointer;
-    transform: scale(1.03);
-    font-family: 'Gotham Medium', sans-serif;
-    font-size: 35px;
 }
-
-.logo {
-    height: 7%;
-    width: 7%;
-    margin-left: 7vh;
-    margin-top: 1.5vh;        
-}
-
 
 ::-webkit-scrollbar {
-    width: 16px;
+    width: 0;
 }
 
-::-webkit-scrollbar-track{
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 16px;
-}
-
-::-webkit-scrollbar-thumb{
-    background: lightslategray;
-    border-radius: 16px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: lightsteelblue;
+html {
+    overflow-y: scroll;
 }

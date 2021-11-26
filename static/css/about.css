@@ -1,27 +1,111 @@
 @import url('http://fonts.cdnfonts.com/css/gotham');
-	
-.full-pg {
-    
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 25px;
-    margin-bottom: 20px;
-    filter:invert(80%);
+
+:root {
+    --navyblue: #001333;
+    --lightblue: #eff3ff;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 10vh;
+    overflow: hidden;
+}
+
+.site {
+    position: absolute;
+    left: 5%;
+    top: 4%;
+    height: 30px;
+    width: 150px;
+    font-size: 30px;    
+    font-family: "Gotham Black", sans-serif;
+    color: var(--lightblue);
+}
+
+.home-img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 47%;   
+    top: 4%; 
+}
+
+.home-img:hover {
+    transform: scale(1.1);
+}
+
+.about-img:hover {
+    transform: scale(1.1);
+}
+
+.logout-img:hover {
+    transform: scale(1.1);
+}
+
+.about-img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 53%;
+    top: 4%;
+}
+
+.logout-img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 5%;
+    top: 4%;
+}
+
+li {
+    float: left;
+    font-family: 'Gotham Light', sans-serif;
+}
+
+li a {
+    display: block;   
+    text-align: center;
+    padding:  14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.toggle {
+    font-size: 16px;
+    font-family: "Gotham Light", sans-serif;
+    background-color: var(--navyblue);
+    color: var(--lightblue);
+    border: 2px var(--lightblue) solid;
+    border-radius: 15px;
+    padding: 4px 12px;
+    position: absolute;
+    top: 5%;
+    left: 75%;
+}
+
+.toggle:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.full-pg {   
+    margin: 90px 30px 0 30px;
+    border-radius: 24px;
 }
 
 .team {
-    font-family: "Gotham Light", sans-serif;
-    font-size: 44px;
+    font-family: "Gotham Black", sans-serif;
+    font-weight: 100;
+    font-size: 40px;
     position: absolute;
     top: 15vh;
     left: 63vh;
-    color: #ff2400;
+    color: var(--navyblue);
     padding: 12px;
-    border: 3px;
-    border-color: red;
-    border-style: groove;
-    border-radius: 16px;
-    text-shadow: 4px 4px 5px #ff2300;
 }
 
 .repo {
@@ -30,77 +114,14 @@
     top: 217%;
     height: 9vh;
     width: 9vh;
-    filter: invert(95%);
 }
 
 .repo:hover {
     transform: scale(1.25);
 }
 
-.menu-icon {
-    position: absolute;
-    right: 6.50%;
-    top: 9%;
-    width: 28px;
-    height: 28px;
-    margin: 0;
-    padding: 0;
-    filter: invert(95%);
-}
-
-.menu-icon:hover {
-    transform: scale(1.20)
-}
-
-.logo {
-    position: absolute;
-    top: 7%;
-    left: 8%;
-    height: 10%;
-    width: 10%;
-}
-
-.home {
-    list-style-type: none;
-    margin:  0;
-    padding: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 7%;
-    right: 11%;
-}
-
-li {
-    float: right;
-    font-family: 'Gotham Light', sans-serif;	        
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding:  14px 16px;
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 24px;
-    
-}
-
-li a:hover {
-    text-decoration: underline;
-    background-color: #fffef2;
-    font-size: 24px;
-    border-radius: 64px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: wheat;
-    text-align: center;
-    padding: 13px;
-    color: black;
-}
-
 body {
-    background-color: turquoise;
+    background-color: var(--navyblue);
 }
 
 .grid-container {
@@ -128,14 +149,12 @@ body {
 }
 
 .grid-item {
-    background-color: #b2ffff;
-    border: 1px solid rgba(0,0,0,0.8);
     padding: 20px;
     font-size: 24px;
     height: 38vh;
     width: 38vh;
     text-align: center;
-    border: 2px royalblue solid;
+    border: 4px var(--navyblue) solid;
     border-radius: 24px;
 }
 
@@ -149,11 +168,13 @@ body {
 h4 {
     margin: 0px auto 10px auto;
     font-family: "Gotham Medium", sans-serif;
+    color: var(--navyblue);
 }
 
 p {
     font-size: 24px;
     font-family: "Gotham Light", sans-serif;
+    color: var(--navyblue);
 }
 
 .profiles {
@@ -170,7 +191,6 @@ p {
 .git {
     height: 40px;
     width: 40px;
-    box-shadow: 4px 4px 5px lightgrey;
     border-radius: 24px;
 }
 
@@ -182,7 +202,6 @@ p {
 .linkin {
     height: 40px;
     width: 40px;
-    box-shadow: 4px 4px 5px lightgrey;
     border-radius: 12px;
 }
 
@@ -191,49 +210,44 @@ p {
     cursor: pointer;		
 }
 
-h2 {
-    font-family: "Gotham Light", sans-serif;
-    font-size: 44px;
+.story {
+    font-family: "Gotham Black", sans-serif;
+    font-weight: 100;
+    font-size: 40px;
     position: absolute;
     top: 140vh;
     left: 69vh;
-    color: #ff2400;
+    color: var(--navyblue);
     padding: 12px;
-    border: 3px;
-    border-color: red;
-    border-style: groove;
-    border-radius: 16px;
-    text-shadow: 4px 4px 5px #ff2300;
 }
 
 .story-1 {		
     position: absolute;		
     top: 160%;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 90px;
+    margin-right: 90px;
     font-size: 36px;
     text-align: justify;
     word-spacing: 5px;
-    color: #fbfcfa;
+    color: var(--navyblue);
 }
 
 .story-2 {		
     position: absolute;		
     top: 185%;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 90px;
+    margin-right: 90px;
     font-size: 36px;
     text-align: justify;
     word-spacing: 5px;
-    color: #fbfcfa;
+    color: var(--navyblue);
 }
 
 footer {
-    font-size: 32px;
-    font-family: "Gotham Bold", sans-serif;
-    font-weight: 800;
+    font-size: 36px;
+    font-family: "Gotham Black", sans-serif;
     position: absolute;
     top: 235%;
-    left: 42%;
-    color: #f5fefd;
+    left: 40%;
+    color: var(--navyblue);
 }

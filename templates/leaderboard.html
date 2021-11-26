@@ -6,31 +6,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
         <link href = "/static/css/leaderboard.css" rel = "stylesheet" type = "text/css">
-        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <script src = "/static/js/leaderboard.js"> </script>
     </head>
     
     
 <body>
 
-    <header>
-
-        <h1 class = "board"> Leaderboard </h1>	 
-        <div class = "home">
-            <li> <a href = "/logout"> Sign Out </li> </a>
-            <li> <a href = "/dashboard"> Dashboard </a> </li>
-        </div>
-        <div>
-            <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" target = "_blank"> <img src = "/static/img/menu_icon.svg" alt = "Menu Icon" class = "menu-icon"> </a>
-        </div> 
-
-    </header>
-
+    <ul>
+        <li  class = "site"> CodeZone  </li>
+        <li> <a href = "/dashboard"> <img src = "/static/img/Home.svg" alt = "Home" class = "home-img" id = "home-change"> </a> </li>
+        <li> <a href = "/about"> <img src = "/static/img/About.svg" alt = "About" class = "about-img" id = "about-change"> </a> </li>
+        <li> <a href = "/logout"> <img src = "/static/img/Logout.svg" alt = "Sign Out" class = "logout-img" id = "logout-change"> </a> </li>
+        <button id = "mode" class = "toggle" onclick="toggle_function()"> Light </button>
+    </ul>
+    
+    <div class = "tile-div"> 
+        <p  class = "leaderboard-tile"> Leaderboard </p>
+    </div>
+    <div class = "text-div"> 
+        <p  class = "leaderboard-text"> Our league-based leaderboard provides a comprehensive outlook on performance. With the distribution of leagues and XP-points, one can minutely monitor their progress. </p>
+    </div>
     <div>
-        <a href = "/dashboard"> <img src = "/static/img/logo_dark.svg" alt = "CodeZone logo" class = "logo"> </a>
+        <img src = "/static/img/leaderboard_images/Win.svg" alt = "Celebrate Leaderboard Rankings" class = "celebrate-pic">
     </div>
 
-   
-    <div class = "container"> 
+    <div class = "container">
+
+        <div class = "logo-div"> 
+            <img src = "/static/img/leaderboard_images/badge_light.svg" class = "league-logo" id = "badge-change">
+        </div>
+
+        <p class = "league-name"> Platinum </p>
+        
+        <div class = "board-heading"> 
+            <div class = "board-heading-text"> Rank </div>
+            <div class = "board-heading-text"> Name </div>
+            <div class = "board-heading-text"> Level </div>                   
+        </div>
+
+        {%for name in data%}
+        <div class = "card">
+            <div class = "card-text"> 1 </div> 
+            <div class = "card-text"> {{name}} </div>
+            <div class = "card-text"> 3 </div>
+        </div>
+        {%endfor%} 
+
+    </div>
+    <!-- <div class = "container"> 
        
         <div class = "logo-div"> <img src = "/static/img/test_league_logo.webp" class = "league-logo"></div>
 
@@ -41,15 +64,15 @@
             
         </div>
              
-        {%for i in range(1, data|length+1)%}
+        {%for name in data%}
         <div class = "card">
-            <div> {{i}} </div> 
-            <div> {{data[i-1][0]}} </div>
-            <div> {{data[i-1][1]}} </div>
+            <div> 1 </div> 
+            <div> {{name}} </div>
+            <div> Level </div>
         </div>
         {%endfor%}    
 
-    </div>       
+    </div> -->   
     
 
 </body>
