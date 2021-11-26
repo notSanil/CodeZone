@@ -7,6 +7,7 @@
         <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
         <link href = "/static/css/leaderboard.css" rel = "stylesheet" type = "text/css">
         <script src = "/static/js/leaderboard.js"> </script>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     </head>
     
     
@@ -36,7 +37,7 @@
             <img src = "/static/img/leaderboard_images/badge_light.svg" class = "league-logo" id = "badge-change">
         </div>
 
-        <p class = "league-name"> Platinum </p>
+        <p class = "league-name"> {{league}} </p>
         
         <div class = "board-heading"> 
             <div class = "board-heading-text"> Rank </div>
@@ -44,11 +45,11 @@
             <div class = "board-heading-text"> Level </div>                   
         </div>
 
-        {%for name in data%}
+        {%for i in range(data|length)%}
         <div class = "card">
-            <div class = "card-text"> 1 </div> 
-            <div class = "card-text"> {{name}} </div>
-            <div class = "card-text"> 3 </div>
+            <div class = "card-text"> {{i+1}} </div> 
+            <div class = "card-text"> {{data[i][0]}} </div>
+            <div class = "card-text"> {{data[i][1]}} </div>
         </div>
         {%endfor%} 
 
