@@ -10,44 +10,46 @@
     <body>
         <nav class='mynav'>
             <span class='CZ'><b>CodeZone</b></span>
-            <a href="/dashboard" class='homelink'> <button class='homebtn'><img src="static/img/dashboard_images/Home_Light.svg" alt="Home" id='home' style="position: relative; right: 15%; top: 3%"></button></a>
+            <a href="#" class='homelink'> <button class='homebtn'><img src="static/img/dashboard_images/Home_Light.svg" alt="Home" id='home' style="position: relative; right: 15%; top: 3%"></button></a>
             <a href="/about" class="homelink" style="position: relative;left: 43vw"> <button class='homebtn2'><img src='static/img/dashboard_images/qmark.svg' class='myimg'></button></a>
             <input type="button" value="Light" onclick="MyFunction()" class="modebtn"  style="position: relative;left: 70vw; top:1vh" id='mode'>
             <a href="/logout" class="homelink" style="position: relative;left: 75vw"> <button class="homebtn"><img src="static/img/dashboard_images/logout.svg" class='myimg' style="size: 200% 200%;"></button></a>
         </nav>
         <div class='div0'>
-            <span class="dboard" style='position: relative; left:1.5vw;'> <b>My Dashboard</b></span>
+            <span style='position: relative; top: 5vh; left:1.5vw; font-family:GothBlack;font-size:150%;'> <b>My Dashboard</b></span>
         </div>
     
         <div class='div1'>
             <span> <b>What's on your mind?</b></span>
         </div>
     
-        <div class="div2">
-            <p class="header2" style="font-size: 105%;"> <b>Problem of the Day </b></p>
-            <a href="#" class="paralnk" style="position: relative; right: 13%"> <span style="position: relative; right: 13%">Go&#8594</span> </a>
+        <div class="div2" style="text-align: center;">
+            <p class="header2" style="font-size: 95%;margin-right: 10%;bottom: 5%;"> <b>Problem of <br> the Day </b></p>
+            <a href="#" class="paralnk" style="position: relative; right: 13%"> <button class="parabtn2" style="position: relative; right: 50%"> Go</button></a>
     
         </div>
     
         <div class="div3">
-            <p class="header2" style="position: relative; left: 15%"> <b>Leaderboard</b></p>
-            <p class='para1'> Bullshit Text</p>
-            <a href="/leaderboard" class="paralnk" style="position: relative; right: 13%"> <span style="position: relative; right: 13%">Go&#8594</span> </a>
+            <p class="header2"> <b>Leaderboard</b></p>
+            <p class='para2'> Our league based leaderboard is designed to create a gamified environment.</p>
+            <p class="para2"> You can monitor your progress minutely.</p>
+            <p class='para2'> Click the button below to view your current standing.</p>
+            <a href="/leaderboard" class="paralnk" style="position: relative; right: 13%; top:3.2%;"><button class="parabtn" style="position: relative; right: 20%;"> Go</button></a>
         </div>
     
         <div class="div4">
-            <p class="header1"> <b>Do you want to compete?</b></p>
-            <p class="header2" style="color: var(--white);"> You'll enter <b>Compete</b> Zone! </p>
+            <p class="header1" style="position: relative; top: 4%"> Do you want to compete?</p>
+            <p class="header2" style="color: var(--white); position: relative; left: -1%;"> You'll enter <b>Compete</b> Zone! </p>
             <p class="para1" style="color: var(--white);"> Solve questions accurately as recommended by our state of the art system which takes into account your current skill level.</p>
             <p class="para1" style="color: var(--white);"> Earn XP and level up faster by solving questions with maximum precision.</p>
             <a href="/compete" class="paralnk"><button class="parabtn"> <b>Enter</b></button> </a>
         </div>
     
         <div class="div5">
-            <p class="header1"> <b>Practice makes progress</b></p>
-            <p class="header2"> You'll enter <b>Practice</b> Zone! </p>
+            <p class="header1" style="position: relative; top: 4%"> <b>Practice makes progress</b></p>
+            <p class="header2" style="position: relative; left: -1%;"> You'll enter <b>Practice</b> Zone! </p>
             <p class="para1"> Practice to your heart's content across a variety of problems which have been crafted and rated by experts around the globe.</p>
-            <p class="para1"> Keep moving and expanding your horizons</p>
+            <p class="para1"> Keep moving and expanding your <br>horizons</p>
             <a href="/practice" class="paralnk"><button class="parabtn2"> <b>Practice</b></button></a>
         </div>
     
@@ -58,12 +60,12 @@
         </div>
         
         <div class='div7_5'>
-            <span class="myspan"> <b>{{lev}}</b> </span>
-            <span class="myspan"> <b>{{xp}}</b> </span>
-            <span class="myspan"> <b>{{leag}}</b></span>
-            <span class="myspan"> <b>Level</b> </span>
-            <span class="myspan"> <b>XP</b> </span>
-            <span class="myspan" style="margin-left: 18%;"> <b>League</b></span>
+            <span class="myspan" style="font-family: GothBlack;"> <b>{{lev}}</b> </span>
+            <span class="myspan" style="font-family: GothBlack;"> <b>{{xp}}</b> </span>
+            <span class="myspan" style="font-family: GothBlack;"> <b>{{leag}}</b></span>
+            <span class="myspan" style="font-size: 90%;"> <b>Level</b> </span>
+            <span class="myspan" style="font-size: 90%;"> <b>XP</b> </span>
+            <span class="myspan" style="margin-left: 18%;font-size: 90%;"> <b>League</b></span>
         </div>
     
         <span class='name'> <b>{{name}}</b> </span>

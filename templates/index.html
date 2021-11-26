@@ -7,24 +7,24 @@
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 <script src="static\js\index.js"></script>
 <body>
-    <nav class="mynav">
-        <a href="/" class="lnk"> Home </a>
-        <a href="/signin"  class="lnk"> Sign-In </a>
-        <a href="/about"  class="lnk"> About </a>
+    <nav class="mynav"></nav>
+        <span class="CZ"> CodeZone </span>
+        <input type="button" value="Light" onclick="MyFunction()" class="modebtn" id='mode'>
+        <a href="/about"><button class="abtbtn"></button></a>
     </nav>
     <div class="div1">
-        <span class="head"> Code your heart out </span>
-        <p style="font-size: 120%; font-family: GothThin"> A complete platform to code hassle free. With our fresh analytics, trending problems and unique zones for practice and competing, you'll  never feel bored or exhausted.</p>
-        <a href="/compete"> <button class="btn1"> Compete </button></a>
-        <a href="/practice"><button class="btn2"> Practice</button></a>    
+        <h1> Code your heart out</h1>
+        <p> <b>A complete platform to code hassle free. With our fresh analytics, trending problems and unique zones for practice and competing, you'll never feel bored or exhausted.</b></p>
     </div>
+    
     <div class="div2">
-        <a href="/trending" class="tooltip"><img src="static\img\index_images\Home_Progress.png" class="myimg"><span class="tooltiptext"> Trending </span></a>
-        <a href="/leaderboard" class="tooltip"><img src="static\img\index_images\Home_Graph.png" class="myimg"><span class="tooltiptext"> Leaderboard </span></a>
+        <a href="/signin"><button class="btn"> Sign-Up</button></a>
+        <a href="/signin"><button class="btn"> Login </button></a>
     </div>
-    <div class="div3">
-        <img src='static\img\index_images\Coding.png' class="myimg2">
-    </div>   
+
+    <div class="div3" id='div3'>
+        
+    </div>
 </body>    
 </head>    
 </html>
