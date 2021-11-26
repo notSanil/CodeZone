@@ -6,15 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
         <link rel = "stylesheet" href = "/static/css/compete.css" type = "text/css">
+        <script src = "/static/js/compete.js"> </script>
     </head>
 
     <body>
 
         <ul>
             <li  class = "site"> CodeZone  </li>
-            <li> <a href = "/dashboard"> <img src = "/static/img/Home.svg" alt = "Home" class = "home-img"> </a> </li>
-            <li> <a href = "/about"> <img src = "/static/img/About.svg" alt = "About" class = "about-img"> </a> </li>
-            <li> <a href = "/logout"> <img src = "/static/img/Logout.svg" alt = "Sign Out" class = "logout-img"> </a> </li>
+            <li> <a href = "/dashboard"> <img src = "/static/img/Home.svg" alt = "Home" class = "home-img" id = "home-change"> </a> </li>
+            <li> <a href = "/about"> <img src = "/static/img/About.svg" alt = "About" class = "about-img" id = "about-change"> </a> </li>
+            <li> <a href = "/logout"> <img src = "/static/img/Logout.svg" alt = "Sign Out" class = "logout-img" id = "logout-change"> </a> </li>
+            <button id = 'mode' class = "toggle" onclick = "toggle_function()"> Light </button>
         </ul>
 
         <div class = "compete-div">
@@ -30,9 +32,9 @@
         
         <div class = "stat-container"> 
             <div class = "stat-answer"> 
-                <div class = "stat-text"> 9 </div>
-                <div class = "stat-text"> Silver </div>
-                <div class = "stat-text"> 5000 </div>                   
+                <div class = "stat-text"> 19 </div>
+                <div class = "stat-text"> Platinum </div>
+                <div class = "stat-text"> 10000</div>                   
             </div>
             <div class = "stat-heading">
                 <div class = "stat-heading-text"> Level </div>
@@ -42,7 +44,7 @@
 
         <div class = "go-container">
             <div class = "go-text-header"> Let's Go ! </div>
-            <div class = "go-text-1"> You're currently 4000 XP away from entering Gold league. </div>
+            <div class = "go-text-1"> You're currently 4000 XP away from entering the next league. </div>
             <div class = "go-text-2"> Head over to our recommended problems which are meant only for you. </div>
         </div>
 
@@ -50,11 +52,10 @@
 
         {%for name, link in data%}
             <div class = "card">
-                <div class = "card-text"> {{name}} <a href = "https://codeforces.com/problemset/problem/{{link}}"> </a> </div>
+                <div class = "card-text"> {{name}} <a href = "https://codeforces.com/problemset/problem/{{link}}" class = "link"> </a> </div>
             </div>
         {%endfor%}
         </div>
-        
     
     </body>
     

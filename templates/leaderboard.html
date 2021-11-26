@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
         <link href = "/static/css/leaderboard.css" rel = "stylesheet" type = "text/css">
-    
+        <script src = "/static/js/leaderboard.js"> </script>
     </head>
     
     
@@ -14,9 +14,10 @@
 
     <ul>
         <li  class = "site"> CodeZone  </li>
-        <li> <a href = "/dashboard"> <img src = "/static/img/Home.svg" alt = "Home" class = "home-img"> </a> </li>
-        <li> <a href = "/about"> <img src = "/static/img/About.svg" alt = "About" class = "about-img"> </a> </li>
-        <li> <a href = "/logout"> <img src = "/static/img/Logout.svg" alt = "Sign Out" class = "logout-img"> </a> </li>
+        <li> <a href = "/dashboard"> <img src = "/static/img/Home.svg" alt = "Home" class = "home-img" id = "home-change"> </a> </li>
+        <li> <a href = "/about"> <img src = "/static/img/About.svg" alt = "About" class = "about-img" id = "about-change"> </a> </li>
+        <li> <a href = "/logout"> <img src = "/static/img/Logout.svg" alt = "Sign Out" class = "logout-img" id = "logout-change"> </a> </li>
+        <button id = "mode" class = "toggle" onclick="toggle_function()"> Light </button>
     </ul>
     
     <div class = "tile-div"> 
@@ -26,15 +27,17 @@
         <p  class = "leaderboard-text"> Our league-based leaderboard provides a comprehensive outlook on performance. With the distribution of leagues and XP-points, one can minutely monitor their progress. </p>
     </div>
     <div>
-        <img src = "/static/img/leaderboard_images/celebrate.svg" alt = "Celebrate Leaderboard Rankings" class = "celebrate-pic">
+        <img src = "/static/img/leaderboard_images/Win.svg" alt = "Celebrate Leaderboard Rankings" class = "celebrate-pic">
     </div>
 
     <div class = "container">
 
         <div class = "logo-div"> 
-            <img src = "/static/img/test_league_logo.webp" class = "league-logo">
+            <img src = "/static/img/leaderboard_images/badge_light.svg" class = "league-logo" id = "badge-change">
         </div>
 
+        <p class = "league-name"> Platinum </p>
+        
         <div class = "board-heading"> 
             <div class = "board-heading-text"> Rank </div>
             <div class = "board-heading-text"> Name </div>

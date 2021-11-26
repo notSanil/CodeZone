@@ -1,5 +1,11 @@
 @import url('http://fonts.cdnfonts.com/css/gotham');
 
+:root {
+    --navyblue: #001333;
+    --lightblue: #eff3ff;
+    --greyblue: #CBD2E1;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -16,7 +22,7 @@ ul {
     width: 150px;
     font-size: 30px;    
     font-family: "Gotham Black", sans-serif;
-    color: #001333;
+    color: var(--navyblue);
 }
 
 .home-img {
@@ -62,17 +68,33 @@ li {
 
 li a {
     display:  block;
-    color: white;
     text-align: center;
     padding:  14px 16px;
     text-decoration: none;
-    color: black;
     font-size: 24px;
 }
 
+.toggle {
+    font-size: 16px;
+    font-family: "Gotham Light", sans-serif;
+    background-color: var(--lightblue);
+    color: var(--navyblue);
+    border: 2px var(--navyblue) solid;
+    border-radius: 15px;
+    padding: 4px 12px;
+    position: absolute;
+    top: 5%;
+    left: 75%;
+}
+
+.toggle:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 body {
-    background: #EFF3FF;
-    color: #1d1d26; 
+    background: var(--lightblue); 
     cursor: default;      
 }
 
@@ -88,14 +110,14 @@ body {
 }
 
 .container {
-    background-color: #001333;
+    background-color: var(--navyblue);
     height: 78vh;          
     margin-left: 1%;
     margin-top: 4%;      
     border-radius: 16px;
     border-width: 3px;
     border-style: solid;
-    border-color: #001333;
+    border-color: var(--navyblue);
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 4px;
@@ -107,7 +129,7 @@ body {
     position: relative;
     top: 5vh;
     padding: 13px;
-    background-color: #EFF3FF;  
+    background-color: var(--lightblue);  
     display: none; 
 }
 
@@ -117,7 +139,7 @@ body {
     position: relative;
     top: 5vh;
     padding: 13px;
-    background-color: #EFF3FF; 
+    background-color: var(--lightblue); 
     display: block;   
 }
 
@@ -127,13 +149,13 @@ body {
     position: relative;
     top: 5vh;
     padding: 13px;
-    background-color: #EFF3FF; 
+    background-color: var(--lightblue); 
     display: block; 
 }
 
 .card-text {
     margin: 5px 10px 5px 10px;
-    color: #001333;
+    color: var(--navyblue);
     text-align: center;
     font-family: 'Gotham Light', sans-serif;
     font-size: 30px; 
@@ -142,7 +164,7 @@ body {
 .link {
     font-size: 22px;
     font-family: "Gotham Light", sans-serif;
-    color: #001333;
+    color: var(--navyblue);
     text-decoration: none;
 }
 
@@ -169,8 +191,8 @@ html {
 }
 
 .dropbtn {
-    background-color: #EFF3FF;
-    color: #001333;
+    background-color: var(--lightblue);
+    color: var(--navyblue);
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -181,7 +203,7 @@ html {
   }
   
 .dropbtn:hover, .dropbtn:focus {
-background-color: #CBD2E1;
+background-color: var(--greyblue); 
 text-decoration: underline;
 text-underline-offset: 3px;
 
@@ -197,7 +219,7 @@ margin-top: 1.75%;
 .dropdown-content {
 display: none;
 position: absolute;
-background-color: #EFF3FF;
+background-color: var(--lightblue);
 min-width: 160px;
 overflow: auto;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -207,13 +229,13 @@ border-radius: 16px;
 }
 
 .dropdown-content button {
-color: #001333;
+color: var(--navyblue);
 padding: 12px 16px;
 text-decoration: none;
 display: block;
-border-bottom: 2px #001333 groove;
+border-bottom: 2px var(--navyblue) groove;
 width: 100%;
-background-color: #EFF3FF;
+background-color: var(--lightblue);
 border-top: none;
 border-left: none;
 border-right: none;
@@ -221,7 +243,7 @@ font-family: "Gotham Light", sans-serif;
 }
 
 .dropdown-content button:last-child {
-color: #001333;
+color: var(--navyblue);
 padding: 12px 16px;
 text-decoration: none;
 display: block;
@@ -229,7 +251,7 @@ border-bottom: none;
 }
 
 .dropdown button:hover {
-    background-color: #CBD2E1;
+    background-color: var(--greyblue);
     cursor: pointer;
 }
 

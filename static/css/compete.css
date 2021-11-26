@@ -1,5 +1,10 @@
 @import url('http://fonts.cdnfonts.com/css/gotham');
 
+:root {
+    --navyblue: #001333;
+    --lightblue: #eff3ff;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -16,7 +21,7 @@ ul {
     width: 150px;
     font-size: 30px;    
     font-family: "Gotham Black", sans-serif;
-    color: #001333;
+    color: var(--navyblue);
 }
 
 .home-img {
@@ -62,22 +67,39 @@ li {
 
 li a {
     display:  block;
-    color: white;
     text-align: center;
     padding:  14px 16px;
     text-decoration: none;
-    color: black;
     font-size: 24px;
 }
 
+.toggle {
+    font-size: 16px;
+    font-family: "Gotham Light", sans-serif;
+    background-color: var(--lightblue);
+    color: var(--navyblue);
+    border: 2px var(--navyblue) solid;
+    border-radius: 15px;
+    padding: 4px 12px;
+    position: absolute;
+    top: 5%;
+    left: 75%;
+}
+
+.toggle:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 body {
-    background: #EFF3FF;
+    background: var(--lightblue);
     color: #1d1d26;    
     cursor: default;   
 }
 
 .compete-div{
-    background-color: #001333;
+    background-color: var(--navyblue);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -99,7 +121,7 @@ body {
 
 .compete-header {
     font-family: "Gotham Thick", sans-serif;
-    color: #EFF3FF;
+    color: var(--lightblue);
     text-align: center;
     font-size: 30px;
     font-weight: 900;
@@ -109,7 +131,7 @@ body {
 .compete-text-1 {
     font-size: 22px;
     font-family: "Gotham Light", sans-serif;
-    color: #eff3ff;
+    color: var(--lightblue);
     margin-left: 7%;
     margin-right: 7%;
     text-align: center;
@@ -118,7 +140,7 @@ body {
 .compete-text-2 {
     font-size: 22px;
     font-family: "Gotham Light", sans-serif;
-    color: #eff3ff;
+    color: var(--lightblue);
     margin-left: 7%;
     margin-right: 7%;
     text-align: justify;
@@ -130,12 +152,12 @@ body {
     font-size: 32px;
     font-family: "Gotham Black", sans-serif;
     margin-top: 3.50%;
-    color: #001333;
+    color: var(--navyblue);
     
 }
 
 .stat-container {
-    background-color: #001333;
+    background-color: var(--navyblue);
     height: 20vh;
     width: 28%;
     position: absolute;
@@ -146,7 +168,7 @@ body {
 }
 
 .stat-answer {
-    font-size: 30px;
+    font-size: 28px;
     font-family: 'Gotham Black', sans-serif;    
     padding: 12px;
     margin: 5% 1% 1% 10%;   
@@ -155,7 +177,7 @@ body {
 }
 
 .stat-text {
-    color: #eff3ff;
+    color: var(--lightblue);
     font-family: "Gotham Black", sans-serif;
     font-weight: 100;
 }
@@ -167,11 +189,11 @@ body {
     margin: 3% 2% 2% -2%;   
     display: flex;
     justify-content: space-around;
-    color: #eff3ff;
+    color: var(--lightblue);
 }
 
 .stat-heading-text {
-    color: #eff3ff;
+    color: var(--lightblue);
     justify-content: space-around;
     font-family: "Gotham Light", sans-serif;
 }
@@ -190,14 +212,14 @@ body {
     font-size: 32px;
     font-family: "Gotham Black", sans-serif;
     text-align: center;
-    color: #eff3ff;
+    color: var(--lightblue);
     margin-top: 5%;
 }
 
 .go-text-1 {
     font-size: 23px;
     font-family: "Gotham Light", sans-serif;
-    color: #eff3ff;
+    color: var(--lightblue);
     margin: 12% 3% 0 10%;
     width: 80%;
     text-align: justify;
@@ -206,14 +228,14 @@ body {
 .go-text-2 {
     font-size: 23px;
     font-family: "Gotham Light", sans-serif;
-    color: #eff3ff;
+    color: var(--lightblue);
     margin: 12% 3% 0 10%;
     text-align: justify;
     width: 80%;    
 }
 
 .container {
-    background-color: #001333;
+    background-color: var(--navyblue);
     height: 80.50vh;  
     width: 130%;       
     position: absolute;
@@ -225,7 +247,7 @@ body {
     border-radius: 24px;
     border-width: 3px;
     border-style: solid;
-    border-color: #001333;
+    border-color: var(--navyblue);
     padding: 4px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -236,14 +258,27 @@ body {
     border-radius: 16px;
     padding: 13px;
     font-size: 22px;
-    background-color: #eff3ff;
+    background-color: var(--lightblue);
     font-family: 'Gotham Light', sans-serif;          
 }
 
 .card-text {
     margin: 5px 10px 5px 10px;
-    color: #001333;
+    color: var(--navyblue);
     text-align: center;
+}
+
+.link {
+    font-size: 22px;
+    font-family: "Gotham Light", sans-serif;
+    color: var(--navyblue);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {

@@ -1,5 +1,10 @@
 @import url('http://fonts.cdnfonts.com/css/gotham');
 
+:root {
+    --navyblue: #001333;
+    --lightblue: #eff3ff;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -16,7 +21,7 @@ ul {
     width: 150px;
     font-size: 30px;    
     font-family: "Gotham Black", sans-serif;
-    color: #001333;
+    color: var(--navyblue);
     cursor: default; 
 }
 
@@ -66,15 +71,33 @@ li {
 
 li a {
     display:  block;
-    color: white;
     text-align: center;
-    padding:  14px 16px;
+    padding: 14px 16px;
     text-decoration: none;
     font-size: 24px;
 }
 
+.toggle {
+    font-size: 16px;
+    font-family: "Gotham Light", sans-serif;
+    background-color: var(--lightblue);
+    color: var(--navyblue);
+    border: 2px var(--navyblue) solid;
+    border-radius: 15px;
+    padding: 4px 12px;
+    position: absolute;
+    top: 5%;
+    left: 75%;
+}
+
+.toggle:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 body {
-    background-color: #eff3ff;
+    background-color: var(--lightblue);
     cursor: default;  
 }
 
@@ -95,7 +118,7 @@ body {
     font-size: 72px;
     font-family: "Gotham Bold", sans-serif;
     font-weight: 900;
-    color: #001333;
+    color: var(--navyblue);
     margin-top: 6%;
     margin-left: 5%;
     margin-bottom: 0em;   
@@ -106,7 +129,7 @@ body {
     font-size: 23px;
     font-family: "Gotham Light", sans-serif;
     font-weight: 900;
-    color: #001333;
+    color: var(--navyblue);
     margin-left: 1%;
     margin-bottom: 0em;
     text-align: justify;   
@@ -114,8 +137,9 @@ body {
 }
 
 .celebrate-pic {
-    width: 88vh;
-    margin-top: 2.40%;
+    width: 38%;
+    margin-left: 6%;
+    margin-top: -0.25%;
 }
 
 ::-webkit-scrollbar {
@@ -123,8 +147,8 @@ body {
 }
 
 .container {
-    background-color: #001333;
-    height: 79vh;  
+    background-color: var(--navyblue);
+    height: 80vh;  
     width: 45%;    
     float: right;
     position: absolute;
@@ -135,7 +159,7 @@ body {
     border-radius: 16px;
     border-width: 3px;
     border-style: solid;
-    border-color: #001333;
+    border-color: var(--navyblue);
     padding: 4px;
     overflow: hidden;
 }
@@ -145,13 +169,24 @@ body {
 }
 
 .league-logo {        
-    margin-top: 15px;
-    height: 17.50%;
-    width: 17.50%;    
+    margin-top: 0.5%;
+    width: 25%;    
 }
 
 .logo-div {
-    text-align: center;    
+    text-align: center; 
+}
+
+.league-name {
+    color: var(--navyblue);
+    text-align: center;
+    font-size: 22px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 26%;
+    position: relative;
+    font-family: "Gotham Black", sans-serif;
 }
 
 .card {
@@ -159,30 +194,34 @@ body {
     border-radius: 16px;
     padding: 13px;
     font-size: 30px;
-    background-color: #eff3ff;
-    font-family: 'Gotham Light', sans-serif;  
+    background-color: var(--lightblue);
+    font-family: 'Gotham Light', sans-serif; 
+    position: relative;
+    bottom: 10%; 
     display: flex;
     justify-content: space-between;    
 }
 
 .card-text {
     margin: 5px 10px 5px 10px;
-    color: #001333;
+    color: var(--navyblue);
     cursor: default;
 }
 
 .board-heading {
     font-size: 30px;
-    color: #eff3ff;
+    color: var(--lightblue);
     font-family: 'Gotham Black', sans-serif;    
     padding: 12px;
-    margin: 2% 5% 5% 5%;   
+    margin: 0 5% 5% 5%;   
+    position: relative;
+    bottom: 10%;
     display: flex;
     justify-content: space-between; 
 }
 
 .board-heading-text { 
-    color: #eff3ff;  
+    color: var(--lightblue);  
 }
 
 html {
