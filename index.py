@@ -141,9 +141,11 @@ def dashboard():
     rankGraph = rank_graph(User.get_rank_per_day(current_user.id, database), signup)
     xpGraph = xp_graph(User.get_xp_per_dat(current_user.id, database), signup)
     
+    with open("problem_day.txt", 'r') as file:
+        link = str(file.read())
 
     return render_template("dashboard.html", name=current_user._name, lev=level, 
-    xp=xp, leag=league, next=int(perc), questions=qGraph, xp_graph=xpGraph, ranks=rankGraph)    
+    xp=xp, leag=league, next=int(perc), questions=qGraph, xp_graph=xpGraph, ranks=rankGraph, potdlink=link)    
 
 @app.route("/signin/callback", methods=["GET"])
 def callback():

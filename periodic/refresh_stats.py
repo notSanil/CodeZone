@@ -1,5 +1,7 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 import atexit
+import random
+import pandas
 
 import db_handler
 
@@ -37,10 +39,20 @@ def refresh_ranks():
         curr.execute("""UPDATE userdata set rpd='{0}' where id='{1}'""".format(ranks, res[i][0]))
         curr.execute("commit")
 
+def refresh_problem():
+    total = 7361
+    ind = random.randint(1, total)
+    df = pandas.read_csv("./data/problem_data.csv")
+    prob = df.iloc[ind, :]
+    link = str(prob[1]) + "/" + str(prob[2])
+    with open('problem_day.txt', 'w') as file:
+        file.write(link)
+
 def refresh_stats():
     refresh_qpd()
     refresh_xp()
     refresh_ranks()
+    refresh_problem()
 
 
 sched = BackgroundScheduler(daemon=True)
