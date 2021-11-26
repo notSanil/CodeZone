@@ -3,6 +3,7 @@
 
     <head>
         <title> Compete Zone </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
         <link rel = "stylesheet" href = "/static/css/compete.css" type = "text/css">
     </head>
@@ -22,22 +23,38 @@
             <p class = "compete-text-2"> <br> Solve questions accurately as recommended by our state of the art system which takes into account your current skill level. </p>
             <img src = "/static/img/compete_pg_images/Compete.svg" alt = "Compete Bars" class = "compete-pic">
         </div>
-    
+
+        <div>
+            <p class = "stats"> Stats </p>
+        </div>
         
-        <!-- 
-        <div class = "container"> 
-    
-            <div class = "compete_text"> Compete Zone </div>
-            
-            <div> <p> Problem 1</p>
-                  <p> Problem 2</p>
-                  <p> Problem 3</p>
-                  <p> Problem 4</p>
-                  <p> Problem 5</p>
+        <div class = "stat-container"> 
+            <div class = "stat-answer"> 
+                <div class = "stat-text"> 9 </div>
+                <div class = "stat-text"> Silver </div>
+                <div class = "stat-text"> 5000 </div>                   
             </div>
-    
-        </div> 
-        -->
+            <div class = "stat-heading">
+                <div class = "stat-heading-text"> Level </div>
+                <div class = "stat-heading-text"> League </div>
+                <div class = "stat-heading-text"> XP </div>
+        </div>
+
+        <div class = "go-container">
+            <div class = "go-text-header"> Let's Go ! </div>
+            <div class = "go-text-1"> You're currently 4000 XP away from entering Gold league. </div>
+            <div class = "go-text-2"> Head over to our recommended problems which are meant only for you. </div>
+        </div>
+
+        <div class = "container">
+
+        {%for name, link in data%}
+            <div class = "card">
+                <div class = "card-text"> {{name}} <a href = "https://codeforces.com/problemset/problem/{{link}}"> </a> </div>
+            </div>
+        {%endfor%}
+        </div>
+        
     
     </body>
     

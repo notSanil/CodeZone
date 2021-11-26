@@ -1,77 +1,86 @@
 @import url('http://fonts.cdnfonts.com/css/gotham');
 
-.logo {
-    position: absolute;
-    top: 4.50%;
-    left: 5%;
-    height: 10%;
-    width: 10%;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 10vh;
+    overflow: hidden;
 }
 
-.home {
-    list-style-type: none;
-    margin:  0;
-    padding: 0;
-    overflow: hidden;
+.site {
     position: absolute;
+    left: 5%;
+    top: 4.50%;
+    height: 30px;
+    width: 150px;
+    font-size: 30px;    
+    font-family: "Gotham Black", sans-serif;
+    color: #001333;
+    cursor: default; 
+}
+
+.home-img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 47%;   
+    top: 4%; 
+}
+
+.home-img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.about-img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.logout-img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.about-img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 53%;
     top: 4%;
-    right: 7.50%;
+}
+
+.logout-img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 5%;
+    top: 4%;
 }
 
 li {
-    float: right;
-    font-family: 'Gotham Light', sans-serif;	        
+    float: left;
+    font-family: 'Gotham Light', sans-serif;
 }
 
 li a {
-    display: block;
+    display:  block;
     color: white;
     text-align: center;
     padding:  14px 16px;
     text-decoration: none;
-    color: #1d1d26;
-    font-size: 22px;    
-}
-
-li a:hover {
-    text-decoration: underline;   
-    text-underline-offset: 5px;
-    text-shadow: 3px 3px 70px #001333;
     font-size: 24px;
-    text-align: center;
-    color: #001333;
 }
 
 body {
-    background-color: #fee2ca;    
-}
-
-.menu-icon {
-    position: absolute;
-    right: 3.50%;
-    top: 5.70%;
-    width: 28px;
-    height: 28px;
-    margin: 0;
-    padding: 0;
-}
-
-.menu-icon:hover {
-    transform: scale(1.20)
-}
-
-.board {
-    font-family: "Gotham Light", sans-serif;
-    font-size: 45px;
-    text-align: center;
-    color: #1d1d26;
-    padding: 16px;    
-    text-shadow: 4px 4px 6px #ff2300; 
+    background-color: #eff3ff;
+    cursor: default;  
 }
 
 .tile-div {
     width: 40%;
-    margin-top: 7.50%;
+    margin-top: 2.50%;
     margin-left: 2%;
 }
 
@@ -79,6 +88,7 @@ body {
     width: 40%;
     margin-bottom: 0em;
     margin-left: 3.50%;
+    cursor: default; 
 }
 
 .leaderboard-tile {
@@ -86,19 +96,21 @@ body {
     font-family: "Gotham Bold", sans-serif;
     font-weight: 900;
     color: #001333;
-    margin-top: 7.50%;
+    margin-top: 6%;
     margin-left: 5%;
-    margin-bottom: -0.17em;     
+    margin-bottom: 0em;   
+    cursor: default;  
 }
 
 .leaderboard-text {
-    font-size: 21px;
+    font-size: 23px;
     font-family: "Gotham Light", sans-serif;
     font-weight: 900;
     color: #001333;
     margin-left: 1%;
     margin-bottom: 0em;
     text-align: justify;   
+    cursor: default;
 }
 
 .celebrate-pic {
@@ -114,7 +126,6 @@ body {
     background-color: #001333;
     height: 79vh;  
     width: 45%;    
-    color: #ccc;
     float: right;
     position: absolute;
     top: 15%;
@@ -131,13 +142,12 @@ body {
 
 .container:hover {
     overflow-y: scroll;
-    cursor: pointer;
 }
 
-.league-logo {    
-    padding-top: 20px; 
-    height: 11%;
-    width: 11%;    
+.league-logo {        
+    margin-top: 15px;
+    height: 17.50%;
+    width: 17.50%;    
 }
 
 .logo-div {
@@ -146,10 +156,10 @@ body {
 
 .card {
     margin: 50px 25px 50px 25px;
-    border-radius: 64px;
+    border-radius: 16px;
     padding: 13px;
     font-size: 30px;
-    background-color: #fee2ca;
+    background-color: #eff3ff;
     font-family: 'Gotham Light', sans-serif;  
     display: flex;
     justify-content: space-between;    
@@ -158,27 +168,21 @@ body {
 .card-text {
     margin: 5px 10px 5px 10px;
     color: #001333;
+    cursor: default;
 }
 
 .board-heading {
     font-size: 30px;
-    color: #fee2ca;
+    color: #eff3ff;
     font-family: 'Gotham Black', sans-serif;    
     padding: 12px;
-    margin: 5%;   
+    margin: 2% 5% 5% 5%;   
     display: flex;
     justify-content: space-between; 
 }
 
 .board-heading-text { 
-    color: #fee2ca;  
-}
-
-.board-heading-text:hover {
-    text-decoration: underline;
-    cursor: pointer;
-    text-underline-offset: 5px;
-    text-decoration-color: #fee2ca;
+    color: #eff3ff;  
 }
 
 html {
