@@ -1,0 +1,22 @@
+Navy blue
+#001333
+
+Pale Orange
+#F1884D
+
+Pale blue
+#D4EBFF
+
+
+1. Relative font sizes are as follows:
+
+                   Card headings - 20
+                   Card description - 11
+                   Buttons - 11
+                   Username - 14
+                   User data - 20 (eg. Platinum, 420, etc)
+                   User data tags - 11
+                   Analytics - 20
+
+2. Refer layouts -1,2 for alignments.
+
