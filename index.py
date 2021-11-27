@@ -1,4 +1,3 @@
-import datetime
 import os
 import requests
 import json
@@ -28,7 +27,6 @@ from graph.graph_generation import xp_graph, rank_graph, questions_graph
 
 
 app = Flask(__name__)
-app.debug = True
 
 login_manager = LoginManager()
 with open("secure/app_secrets.json") as appSecrets:
@@ -109,12 +107,16 @@ def compete():
 
 @app.route("/leaderboard")
 def leaderboard():
+    if not current_user.is_authenticated:
+        return redirect('/signin')
     res = pages.leadeboard.create_league_leadeboard(current_user.id, database)
     leg = User.get_league(current_user.id, database)
     return render_template('leaderboard.html', data=res, league=leg)
 
 @app.route("/practice")
 def practice():
+    if not current_user.is_authenticated:
+        return redirect('/signin')
     filename = 'data/sorted_problems.csv'
     data = pandas.read_csv(filename, header=0).iloc[:,1:]
     data.columns = data.columns.str.strip()
@@ -139,6 +141,8 @@ def signin():
 
 @app.route("/trending")
 def trending():
+    if not current_user.is_authenticated:
+        return redirect('/signin')
     return render_template('trending.html')
 
 @app.route("/dashboard", methods=['GET'])
