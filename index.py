@@ -23,7 +23,7 @@ import periodic.refresh_recom
 import periodic.refresh_user
 import periodic.refresh_stats
 
-#from graph.graph_generation import xp_graph, rank_graph, questions_graph
+from graph.graph_generation import xp_graph, rank_graph, questions_graph
 # End of imports
 
 
@@ -153,7 +153,7 @@ def dashboard():
     perc = (xp / xp_to_next) * 100
     questions = User.get_q_per_day(current_user.id, database)
     signup = User.get_signup_date(current_user.id, database)
-    """
+    
     qGraph = questions_graph(questions, signup)
     rankGraph = rank_graph(User.get_rank_per_day(current_user.id, database), signup)
     xpGraph = xp_graph(User.get_xp_per_dat(current_user.id, database), signup)
@@ -163,7 +163,7 @@ def dashboard():
 
     return render_template("dashboard.html", name=current_user._name, lev=level, 
     xp=xp, leag=league, next=int(perc), questions=qGraph, xp_graph=xpGraph, ranks=rankGraph, potdlink=link)    
-    """
+    
 @app.route("/signin/callback", methods=["GET"])
 def callback():
     flow.fetch_token(authorization_response=request.url)
