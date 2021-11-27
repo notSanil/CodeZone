@@ -127,9 +127,6 @@ def practice():
     print(easytbl)
     return render_template('practice.html', easytbl=easytbl, midtbl=midtbl, hardtbl=hardtbl, insanetbl=insanetbl)
 
-@app.route("/profilepage")
-def profilepage():
-    return render_template('profilepage.html')
 
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
