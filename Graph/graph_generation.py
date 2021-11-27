@@ -3,10 +3,9 @@ import matplotlib.pyplot as plt
 import mpld3
 import pandas as pd
 import numpy as np
-import ctypes
 
-user32 = ctypes.windll.user32
-screensize = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
+
+screensize = (1280, 720)
 plt.switch_backend('agg')
 
 
