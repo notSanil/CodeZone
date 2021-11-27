@@ -124,7 +124,6 @@ def practice():
     midtbl = list(data[(data['Rating']<=1600) & (data['Rating']>800)].sample(20).values)
     hardtbl = list(data[(data['Rating']<=2500) & (data['Rating']>1600)].sample(20).values)
     insanetbl = list(data[data['Rating']>2500].sample(20).values)
-    print(easytbl)
     return render_template('practice.html', easytbl=easytbl, midtbl=midtbl, hardtbl=hardtbl, insanetbl=insanetbl)
 
 

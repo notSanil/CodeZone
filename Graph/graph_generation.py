@@ -27,14 +27,12 @@ def questions_graph(ques, date):
     while not (len(dates) >= len(ques)):
         
         dates.append(date + datetime.timedelta(days= len(dates)))
-    print(dates)
     a = plt.stackplot(dates, ques, colors=['#001333'])
 
     ticks = select_even(dates, min(5, len(dates)))
     
     plt.xlabel("Date", color='#F1884D')
     plt.xticks(ticks)
-    print(ticks)
     plt.title("Questions solved per day")
     plt.grid(True, color='#EFF3FF')# set graph grid color and control its pres
     ax = plt.axes()
