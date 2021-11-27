@@ -1,4 +1,3 @@
-import datetime
 import os
 import requests
 import json
@@ -28,7 +27,6 @@ from graph.graph_generation import xp_graph, rank_graph, questions_graph
 
 
 app = Flask(__name__)
-app.debug = True
 
 login_manager = LoginManager()
 with open("secure/app_secrets.json") as appSecrets:
