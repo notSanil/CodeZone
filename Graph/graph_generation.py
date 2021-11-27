@@ -71,7 +71,6 @@ def rank_graph(rank, date):
     b.set_figheight((screensize[1] * 0.54 * 0.5)/100.0)
     
     code = mpld3.fig_to_html(b)
-    print(code)
     
     return code
 
