@@ -4,19 +4,15 @@
     font-size: 40px;
 	padding: 15px;
     text-align: center;
-    font-family: "Gotham Bold", sans-serif;
-    color: #1d1d26;    
-}
-
-body {
-    background-color: turquoise;
+    font-family: "Gotham Black", sans-serif;
+    color: #001333;    
 }
 
 form {
-    background-color: whitesmoke;
+    background-color: #001333;
     height: 63.50vh;  
     width: 70%;    
-    color: #1d1d26;
+    color: #eff3ff;
     font-size: 32px;
     font-family: "Gotham Light", sans-serif;
     text-align: center;
@@ -24,7 +20,7 @@ form {
     border-radius: 16px;
     border-width: 3px;
     border-style: solid;
-    border-color: navy;
+    border-color: #001333;
     position: fixed;
     top: 12vh;
     left: 10vh;
@@ -34,7 +30,7 @@ form {
 }
 
 body {
-	background-color: turquoise;
+	background-color: #eff3ff;
 	margin: 0;
 	padding: 16px;
 }
@@ -42,6 +38,7 @@ body {
 .input-box {
 	font-size: 18px;
 	border: 0;
+    background-color: whitesmoke;
 	padding-bottom: 12px;
 	margin-bottom: 36px;
 	border-bottom: 1px solid #ccc;
@@ -50,7 +47,7 @@ body {
 }
 
 .input-box:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
     cursor: pointer;
 }
 
@@ -87,16 +84,17 @@ body {
 }
 
 .btn-style {
-	background: #1434a4;
+	background: orange;
 	font-weight: 700;
+    font-family: "Gotham Black", sans-serif;
     padding: 0;
 	border-radius: 16px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .btn-style span {
 	display: block;
-	background: #7df9ff;
+	background: #F1884D;
 	padding: 24px 36px;
 	border: 1px solid #1d1d26;
 	border-radius: 16px;
@@ -109,4 +107,6 @@ body {
     cursor: pointer;
     color: #000080;
     text-decoration: underline;
+    text-underline-offset: 2px;
+    color: #001333;
 }
