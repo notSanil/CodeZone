@@ -1,68 +1,109 @@
 @import url('http://fonts.cdnfonts.com/css/gotham');
 
-.heading {
-    font-size: 40px;
-	padding: 15px;
-    text-align: center;
-    font-family: "Gotham Bold", sans-serif;
-    color: #1d1d26;    
+:root {
+    --navyblue: #001333;
+    --lightblue: #eff3ff;
+    --grey: #c3c3c3;
 }
 
-body {
-    background-color: turquoise;
+.heading {
+    font-size: 36px;
+	padding: 0;
+    text-align: center;
+    font-family: "Gotham Black", sans-serif;
+    color: var(--lightblue); 
+    margin-top: -2.50%; 
+    padding-bottom:  5%;
 }
 
 form {
-    background-color: whitesmoke;
-    height: 63.50vh;  
-    width: 70%;    
-    color: #1d1d26;
+    background-color: var(--navyblue);
+    height: 80vh;  
+    width: 45%;    
+    color: var(--lightblue);
     font-size: 32px;
     font-family: "Gotham Light", sans-serif;
     text-align: center;
     padding-bottom: 8px;
-    border-radius: 16px;
+    border-radius: 20px;
     border-width: 3px;
     border-style: solid;
-    border-color: navy;
-    position: fixed;
-    top: 12vh;
-    left: 10vh;
-    right: 10vh;
-    bottom: 10vh;
-    margin: auto;
+    border-color: var(--navyblue);
+    float: right;
+    margin-top: 7.50%;
+    margin-right: 3%;
 }
 
 body {
-	background-color: turquoise;
+	background-color: var(--lightblue);
 	margin: 0;
-	padding: 16px;
+}
+
+.site {
+    list-style-type: none;
+    position: absolute;
+    left: 5%;
+    top: 4%;
+    height: 30px;
+    width: 150px;
+    font-size: 30px;    
+    font-family: "Gotham Black", sans-serif;
+    color: var(--navyblue);
+    cursor: default; 
+}
+
+.toggle {
+    font-size: 16px;
+    font-family: "Gotham Light", sans-serif;
+    background-color: var(--lightblue);
+    color: var(--navyblue);
+    border: 2px var(--navyblue) solid;
+    border-radius: 15px;
+    padding: 4px 12px;
+    position: absolute;
+    top: 4.65%;
+    left: 75%;
+}
+
+.toggle:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.handle {
+    height: 80vh;
+    width:  80vh;
+    margin-top: 8.50%;
+    margin-left: 2.50%;
 }
 
 .input-box {
-	font-size: 18px;
+	font-size: 24px;
 	border: 0;
-	padding-bottom: 12px;
+    background-color: var(--lightblue);
+	padding-bottom: 16px;
 	margin-bottom: 36px;
-	border-bottom: 1px solid #ccc;
-    border-radius: 16px;
-	width: 70%;
+	border-bottom: 1px solid var(--navyblue);
+    border-radius: 12px;
+	width: 90%;
 }
 
 .input-box:hover {
-    transform: scale(1.15);
-    cursor: pointer;
+    transform: scale(1.05);
+    cursor: text;
 }
 
 .email-box {
-    font-size: 18px;
+    font-size: 24px;
 	border: 0;
-	padding-bottom: 12px;
+	padding-bottom: 16px;
 	margin-bottom: 36px;
-	border-bottom: 1px solid #ccc;
-    border-radius: 16px;
-	width: 70%;
-    background-color: lightgrey;
+	border-bottom: 1px solid var(--navyblue);
+    border-radius: 12px;
+	width: 90%;
+    background-color: var(--grey);
+    cursor:  default;
 }
 
 .form-details {
@@ -70,35 +111,42 @@ body {
 	padding-left: 40px;
 	padding-right: 40px;
 	padding-bottom: 40px; 
-    font-size: 24px;
+}
+
+.entry {
+    color: var(--lightblue);
+    font-size:  28px;
 }
 
 ::placeholder {
-    color: gray;
-    font-size: 19px;
-    font-family: "Gotham Light", sans-serif;
-    padding-left: 8px;
+    color: var(--navyblue);
+    font-size: 24px;
+    font-family: "Gotham Medium", sans-serif;
+    padding-left: 6px;
+    padding-top:  12px;
 }
 
 :required {
-    color: #1d1d26;
+    color: var(--navyblue);
     padding-left: 8px;
-    padding-top: 8px;
+    padding-top: 12px;
 }
 
 .btn-style {
-	background: #1434a4;
+	background: orange;
 	font-weight: 700;
+    font-family: "Gotham Black", sans-serif;
     padding: 0;
 	border-radius: 16px;
-    font-size: 14px;
+    font-size: 20px;
+    margin: -5px;
 }
 
 .btn-style span {
 	display: block;
-	background: #7df9ff;
+	background: #F1884D;
 	padding: 24px 36px;
-	border: 1px solid #1d1d26;
+	border: 1px solid orange;
 	border-radius: 16px;
 	transform: translate3d(-4.25px, -4.25px, 0);
 	transition: transform 0.25s cubic-bezier(0.7, 0, 0.2, 1);
@@ -107,6 +155,16 @@ body {
 .btn-style:hover span {
 	transform: translate3d(-8px, -8px, 0);
     cursor: pointer;
-    color: #000080;
     text-decoration: underline;
+    text-underline-offset: 3px;
+    color: var(--navyblue);
 }
+
+html {
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
