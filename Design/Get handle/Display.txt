@@ -1,0 +1,10 @@
+Colors used :
+	E-mail box (Light theme)
+	#45546E
+	E-mail box (Dark theme)
+	#C3C3C3
+	
+Realtive font sizes:
+	Almost there - 20
+	Name, Email, Handle - 10
+	Submit - 10
