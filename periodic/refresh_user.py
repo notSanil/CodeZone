@@ -7,6 +7,7 @@ import psycopg2
 import pandas
 
 from model.gen_data import XP
+import db_handler
 
 
 def get_user_submission_stats(username):
@@ -41,8 +42,8 @@ def get_user_submission_stats(username):
 
 def refresh():
     print("Data refreshed")
-    conn = psycopg2.connect(database='data', user='postgres', password='a', port=5432)
-    cursor = conn.cursor()
+    
+    cursor = db_handler.db().get_db()
 
     ratings = pandas.read_csv('data\problem_set.csv')
     ratings = ratings.set_index('problem_id').to_dict()['rating']

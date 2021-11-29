@@ -4,9 +4,11 @@
 <title>LandingPage</title>
 <link rel="stylesheet" href="static\css\index.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name = "description" content = "CodeZone serves as a platform which eases the path for our fellow coders, by providing a dedicated roadmap for progression via our recommendation system along with our gamified learning environment, which provides a zeal to move forward." />
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 <script src="static\js\index.js"></script>
-<body>
+</head>
+<body onload="ModeFunction()">
     <nav class="mynav"></nav>
         <span class="CZ"> CodeZone </span>
         <input type="button" value="Light" onclick="MyFunction()" class="modebtn" id='mode'>
@@ -25,6 +27,5 @@
     <div class="div3" id='div3'>
         
     </div>
-</body>    
-</head>    
+</body>        
 </html>

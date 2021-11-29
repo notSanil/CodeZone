@@ -1,5 +1,7 @@
 import psycopg2
 import psycopg2.extensions
+import os
+import urllib.parse as urlparse
 
 
 class db:
@@ -8,9 +10,17 @@ class db:
         self.DBNAME = "data"
         self.TNAME = "userdata"
 
+   
+
 
     def get_conn(self):
-        conn = psycopg2.connect(dbname='postgres', user='postgres', password='a', port='5432')
+        #url = urlparse.urlparse(os.environ['DATABASE_URL']) 
+        dbname = 'data'
+        user = 'postgres'
+        password = 'a'
+        host = 'localhost'
+        port = '5432'
+        conn = psycopg2.connect(dbname=dbname, user=user, password=password, port=port, host=host)
         conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)
         cursor = conn.cursor()
         cursor.execute("SELECT datname FROM pg_catalog.pg_database WHERE datname='{}'".format(self.DBNAME))

@@ -1,6 +1,15 @@
+
+function ModeFunction(){
+	var x=localStorage.getItem('modes');
+	if(x==='Dark'){
+		document.getElementById('mode').click();
+        console.log("Fuck")}		
+}
+
 function MyFunction(){
     var r= document.querySelector(':root')
     if(document.getElementById('mode').value==='Light'){
+        localStorage.setItem('modes', 'Dark');
         document.getElementById('mode').value='Dark';
         r.style.setProperty('--black', 'white');
         r.style.setProperty('--white', 'black');
@@ -11,6 +20,7 @@ function MyFunction(){
     }            
     else    
     {document.getElementById('mode').value='Light';
+    localStorage.setItem('modes', 'Light');
     r.style.setProperty('--black', 'black');
     r.style.setProperty('--white', 'white');
     r.style.setProperty('--dark-blue', '#001333');

@@ -3,14 +3,15 @@ import psycopg2
 import atexit
 
 from model.generate_predictions import recommendations
+import db_handler
 
 
 def get_user_recommendations(username, solved):
     return recommendations(username, 10, solved) 
 
 def refresh_recommendations():
-    conn = psycopg2.connect(database='data', user='postgres', password='a', port=5432)
-    cursor = conn.cursor()
+    
+    cursor = db_handler.db().get_db()
 
     _query = """Select id, handle, solved FROM userdata WHERE handle IS NOT NULL AND solved IS NOT NULL
     """
@@ -29,7 +30,7 @@ def refresh_recommendations():
             
 
 sched = BackgroundScheduler(daemon=True)
-sched.add_job(refresh_recommendations, 'interval', minutes=2) # TODO: Change this to something more reasonable
+sched.add_job(refresh_recommendations, 'interval', minutes=1) # TODO: Change this to something more reasonable
 sched.start()
 
 
