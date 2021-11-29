@@ -48,7 +48,8 @@ body {
 
 .input-box:hover {
     transform: scale(1.05);
-    cursor: pointer;
+    cursor: pointer; 
+    /* make this 'cursor: text;' */
 }
 
 .email-box {
