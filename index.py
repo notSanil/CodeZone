@@ -22,7 +22,7 @@ import periodic.refresh_recom
 import periodic.refresh_user
 import periodic.refresh_stats
 
-from Graph.graph_generation import xp_graph, rank_graph, questions_graph
+from graph.graph_generation import xp_graph, rank_graph, questions_graph
 # End of imports
 
 

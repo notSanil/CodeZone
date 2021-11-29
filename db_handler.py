@@ -14,12 +14,12 @@ class db:
 
 
     def get_conn(self):
-        url = urlparse.urlparse(os.environ['DATABASE_URL'])
-        dbname = url.path[1:]
-        user = url.username
-        password = url.password
-        host = url.hostname
-        port = url.port
+        #url = urlparse.urlparse(os.environ['DATABASE_URL']) 
+        dbname = 'data'
+        user = 'postgres'
+        password = 'a'
+        host = 'localhost'
+        port = '5432'
         conn = psycopg2.connect(dbname=dbname, user=user, password=password, port=port, host=host)
         conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)
         cursor = conn.cursor()
