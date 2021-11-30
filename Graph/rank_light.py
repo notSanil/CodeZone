@@ -5,6 +5,8 @@ import pandas as pd
 
 def light_rank(date, rank):
     dates = [date]
+    if not len(rank):
+        rank.append(0)
     p = [[date, rank[0]]]
     while (len(p) != len(rank)):
         p.append([(p[-1][0] + datetime.timedelta(days = 1)), rank[len(p) - 1]])

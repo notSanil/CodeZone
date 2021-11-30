@@ -17,8 +17,9 @@ def recommendations(username, k, questions):
     trainset, testSet = train_test_split(data, test_size=size, shuffle=False)
 
     testSet = data.build_full_trainset()
-    if (not(testSet.knows_user(username))):
-        return [95640, 96660, 95580, 95040, 94920, 94740, 93600, 93060, 92520, 92220]
+    trainset = data.build_full_trainset()
+    # if (not (testSet.knows_user(username) and trainset.knows_user(username))):
+    #     return [95640, 96120, 95580, 95040, 94920, 94744, 93600, 93060, 92520, 92220]
     df = pd.read_csv('./data/trained_data.csv')
     simsMatrix = df.values.tolist()     #loading the similarity matrix obtained by training model
 
