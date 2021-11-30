@@ -32,6 +32,8 @@ def light_xp(date, xp):
         name='XP',
     ))
     fig.update_layout(template = 'plotly_white')
+    fig.update_xaxes(color = '#F1884D')
+    fig.update_yaxes(color = '#F1884D')
     code = pi.to_html(fig)
     return code
 #   fig.show()
