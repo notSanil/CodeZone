@@ -11,6 +11,8 @@ def light_rank(date, rank):
     df = pd.DataFrame(p)
     df.columns = ['Dates', 'Rank']
     graphs = px.area(df, x = 'Dates', y = 'Rank', template = 'plotly_white')
+    graphs.update_xaxes(color = '#F1884D')
+    graphs.update_yaxes(color = '#F1884D')
     # px.color_continuous_scale='#F1884D'
     code = pi.to_html(graphs)
     return code
