@@ -3,6 +3,9 @@ import plotly.io as pi
 import datetime
 def light_xp(date, xp):
     dates = [date]
+    if not len(xp):
+        xp.append(0)
+
     while (len(dates) != len(xp)):
         dates.append(dates[-1] + datetime.timedelta(days = 1))
     xp_rev = dates[::-1]

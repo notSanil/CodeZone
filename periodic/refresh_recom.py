@@ -23,6 +23,8 @@ def refresh_recommendations():
     res = cursor.fetchall()
     print("Recommendations refreshed")
     for row in res:
+        if not len(row[2]):
+            continue
         recoms = get_user_recommendations(row[1], row[2])
         
         cursor.execute(insert_query.format(row[0], recoms))

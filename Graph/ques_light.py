@@ -4,6 +4,8 @@ import datetime
 import pandas as pd
 def light_ques(date, ques):
     dates = [date]
+    if not len(ques):
+        ques.append(0)
     p = [[date, ques[0]]]
     while (len(p) != len(ques)):
         p.append([(p[-1][0] + datetime.timedelta(days = 1)), ques[len(p) - 1]])
