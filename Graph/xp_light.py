@@ -34,7 +34,16 @@ def light_xp(date, xp):
     fig.update_layout(template = 'plotly_white')
     fig.update_xaxes(color = '#F1884D')
     fig.update_yaxes(color = '#F1884D')
-    code = pi.to_html(fig)
+    fig.update_layout(xaxis_tickformat = '%d %b')
+    fig.update_layout(margin=dict(
+        l=0,
+        r=0,
+        b=0,
+        t=0,
+        pad=4)
+    )
+    code = pi.to_html(fig, full_html=False, config={'displayModeBar': False}, default_height="29.5vh",
+    default_width="95%")
     return code
 #   fig.show()
 # light_xp(datetime.date.today(), [1, 3, 42, 5, 6, 2, 9])

@@ -22,7 +22,7 @@ import periodic.refresh_recom
 import periodic.refresh_user
 import periodic.refresh_stats
 
-from graph.graph_generation import xp_graph, rank_graph, questions_graph
+import Graph.ques_light, Graph.rank_light, Graph.xp_light
 # End of imports
 
 
@@ -154,9 +154,9 @@ def dashboard():
     questions = User.get_q_per_day(current_user.id, database)
     signup = User.get_signup_date(current_user.id, database)
     
-    qGraph = questions_graph(questions, signup)
-    rankGraph = rank_graph(User.get_rank_per_day(current_user.id, database), signup)
-    xpGraph = xp_graph(User.get_xp_per_dat(current_user.id, database), signup)
+    qGraph = Graph.ques_light.light_ques(signup, questions)
+    rankGraph = Graph.rank_light.light_rank(signup, User.get_rank_per_day(current_user.id, database))
+    xpGraph = Graph.xp_light.light_xp(signup, User.get_xp_per_dat(current_user.id, database))
     
     with open("problem_day.txt", 'r') as file:
         link = str(file.read())

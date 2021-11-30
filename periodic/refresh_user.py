@@ -23,6 +23,8 @@ def get_user_submission_stats(username):
 
     questions = {}
     for row in result:
+        if 'contestId' not in row:
+            continue
         qId = row['contestId'] * 60
         if len(row['problem']['index']) == 2:
             offset = 2 * ord(row['problem']['index'][0]) + (bool)(row['problem']['index'][1] == '2') - 130

@@ -303,6 +303,13 @@ body{
         width: 88%; height: 63%; border-radius: 25px;
         position: relative; left: 10%;
         margin-top: 2%; 
-        border: 2px solid gray;       
+        border: 2px solid gray;  
+        z-index: 2;     
+    }
+    .graphs{
+        position: relative;
+        top: 2vh;
+        left: 0.6vw;
+
     }
     
