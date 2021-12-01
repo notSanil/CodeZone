@@ -9,9 +9,9 @@ function toggle_function() {
     var r = document.querySelector(':root')
     if (document.getElementById('mode').innerText == 'Light') {
         localStorage.setItem('modes', 'Dark');
-        document.getElementById('home-change').src = '/static/img/Home.svg';
-        document.getElementById('about-change').src = '/static/img/About.svg';
-        document.getElementById('logout-change').src = '/static/img/Logout.svg';
+        document.getElementById('home-change').src = '/static/img/Home_dark.svg';
+        document.getElementById('about-change').src = '/static/img/About_dark.svg';
+        document.getElementById('logout-change').src = '/static/img/Logout_dark.svg';
         document.getElementById('repo-change').src = '/static/img/about_pg_images/Repo_dark.svg';
         document.getElementById('full-pg-change').src = '/static/img/about_pg_images/about_dark_bg.svg';
         document.getElementById('git-change').src = "/static/img/about_pg_images/GitHub_dark.svg";
@@ -32,9 +32,9 @@ function toggle_function() {
     else {
         localStorage.setItem('modes', 'Light');
         document.getElementById('mode').innerText = "Light";
-        document.getElementById('home-change').src = '/static/img/Home_dark.svg';
-        document.getElementById('about-change').src = '/static/img/About_dark.svg';
-        document.getElementById('logout-change').src = '/static/img/Logout_dark.svg';
+        document.getElementById('home-change').src = '/static/img/Home.svg';
+        document.getElementById('about-change').src = '/static/img/About.svg';
+        document.getElementById('logout-change').src = '/static/img/Logout.svg';
         document.getElementById('repo-change').src = '/static/img/about_pg_images/Repo_light.svg';
         document.getElementById('full-pg-change').src = '/static/img/about_pg_images/about_bg.svg';
         document.getElementById('git-change').src = "/static/img/about_pg_images/GitHub_light.svg";

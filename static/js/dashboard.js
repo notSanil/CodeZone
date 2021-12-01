@@ -3,7 +3,7 @@ function ModeFunction(){
 	var x=localStorage.getItem('modes');
 	if(x==='Dark'){
 		document.getElementById('mode').click();
-        console.log("Fuck")}		
+    }		
 }
 
 function MyFunction(){

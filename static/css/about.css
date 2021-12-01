@@ -21,7 +21,7 @@ ul {
     width: 150px;
     font-size: 30px;    
     font-family: "Gotham Black", sans-serif;
-    color: var(--lightblue);
+    color: var(--navyblue);
 }
 
 .home-img {
@@ -76,9 +76,9 @@ li a {
 .toggle {
     font-size: 16px;
     font-family: "Gotham Light", sans-serif;
-    background-color: var(--navyblue);
-    color: var(--lightblue);
-    border: 2px var(--lightblue) solid;
+    background-color: var(--lightblue);
+    color: var(--navyblue);
+    border: 2px var(--navyblue) solid;
     border-radius: 15px;
     padding: 4px 12px;
     position: absolute;
@@ -103,7 +103,7 @@ li a {
     font-size: 40px;
     position: absolute;
     top: 15vh;
-    left: 63vh;
+    left:37vw;
     color: var(--navyblue);
     padding: 12px;
 }
@@ -121,7 +121,7 @@ li a {
 }
 
 body {
-    background-color: var(--navyblue);
+    background-color: var(--lightblue);
 }
 
 .grid-container {
@@ -132,7 +132,7 @@ body {
     padding: 20px;
     padding-top: 90px;
     top: 25%;
-    left: 6%;
+    left: 12%;
     overflow: hidden;		
 }
 
@@ -141,10 +141,9 @@ body {
     position: absolute;
     grid-gap: 45px;
     grid-template-columns: auto auto auto;
-    padding: 20px;
-    padding-top: 95px;
-    top: 75%;
-    left: 22%;
+    padding-bottom: 20px;
+    top: 90%;
+    left: 26.25%;
     overflow: hidden;
 }
 
@@ -192,6 +191,7 @@ p {
     height: 40px;
     width: 40px;
     border-radius: 24px;
+    z-index: 20;
 }
 
 .git:hover {
@@ -216,7 +216,7 @@ p {
     font-size: 40px;
     position: absolute;
     top: 140vh;
-    left: 69vh;
+    left: 42vw;
     color: var(--navyblue);
     padding: 12px;
 }
