@@ -24,8 +24,9 @@ def refresh_recommendations():
     print("Recommendations refreshed")
     for row in res:
         if not len(row[2]):
-            continue
-        recoms = get_user_recommendations(row[1], row[2])
+            recoms = [95640, 96120, 95580, 95040, 94920, 94744, 93600, 93060, 92520, 92220]
+        else:
+            recoms = get_user_recommendations(row[1], row[2])
         
         cursor.execute(insert_query.format(row[0], recoms))
         cursor.execute("commit")
