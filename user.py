@@ -82,7 +82,10 @@ class User(UserMixin):
     @staticmethod
     def convert_xp_to_level(xp):
         level = xp / 100
+        print(level)
+        print(math.pow(level, 1/3))
         level = round(math.pow(level, 1/3))
+        print(level)
         return int(level)
     
     @staticmethod
