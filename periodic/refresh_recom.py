@@ -13,7 +13,7 @@ def refresh_recommendations():
     
     cursor = db_handler.db().get_db()
 
-    _query = """Select id, handle, solved FROM userdata WHERE handle IS NOT NULL AND solved IS NOT NULL
+    _query = """Select id, handle, solved, recommended FROM userdata WHERE handle IS NOT NULL AND solved IS NOT NULL
     """
     insert_query = """UPDATE userdata
                     SET recommended='{1}'
@@ -23,6 +23,8 @@ def refresh_recommendations():
     res = cursor.fetchall()
     print("Recommendations refreshed")
     for row in res:
+        if len(row[3]) > 6:
+            continue
         if not len(row[2]):
             recoms = [95640, 96120, 95580, 50040, 94920, 94744, 93600, 93060, 92520, 92220]
         else:

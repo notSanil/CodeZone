@@ -99,7 +99,7 @@ def compete():
     dat = pages.compete.get_recommendations(current_user.id, database)
     leg = User.get_league(current_user.id, database)
     _xp = User.get_xp(current_user.id, database)
-    next_league = ((level - 1) // 5 + 1) * 5
+    next_league = (((level - 1) // 5 + 1) * 5) + 1
     next_xp = (next_league ** 3) * 100
     diff = next_xp - _xp
     
