@@ -31,7 +31,7 @@ df = pd.DataFrame(list(raw_to_innerid.items()))
 df.to_csv('raw_to_inner.csv', index = False) # Storing it in csv format
 
 sim_options = {
-                'name': 'cosine',
+                'name': 'pearson',
                 'user_based': False
                }
 # setting the parameters for model training and training it accordingly
